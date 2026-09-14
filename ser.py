@@ -17,7 +17,8 @@ ROOT = Path(__file__).resolve().parent
 CATALOG = ROOT / "config" / "catalog.json"
 HISTORY = ROOT / "state" / "history.json"
 META_VERSION = os.getenv("META_API_VERSION", "v26.0")
-META = f"https://graph.facebook.com/{META_VERSION}"
+META_HOST = os.getenv("INSTAGRAM_GRAPH_HOST", "graph.instagram.com")
+META = f"https://{META_HOST}/{META_VERSION}"
 
 
 def read_json(path: Path, default):
