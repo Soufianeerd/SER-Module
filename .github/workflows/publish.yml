@@ -36,6 +36,7 @@ jobs:
           CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
           CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
           META_API_VERSION: v26.0
+          INSTAGRAM_GRAPH_HOST: graph.instagram.com
         run: |
           NICHE="${{ inputs.niche }}"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
