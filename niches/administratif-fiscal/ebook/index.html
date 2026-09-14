@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SER Guide 01 — Micro-entreprise 2026 · Optimiser puis déclarer</title>
+<meta name="description" content="Guide web interactif SER Guides pour préparer, optimiser et déclarer une micro-entreprise en 2026.">
+<meta name="theme-color" content="#0F172A">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<style>
+:root{
+  --noir:#0F172A;
+  --noir-2:#111827;
+  --paper:#F8FAFC;
+  --card:#FFFFFF;
+  --ink:#0F172A;
+  --soft:#64748B;
+  --rule:#E2E8F0;
+  --emeraude:#06B6D4;
+  --emeraude-pale:#ECFEFF;
+  --or:#06B6D4;
+  --or-pale:#ECFEFF;
+  --brique:#A33E2C;
+  --brique-pale:#F8EAE6;
+  --shadow:0 1px 2px rgba(15,23,42,.05),0 12px 32px -16px rgba(15,23,42,.22);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Inter",Georgia,serif;font-size:18px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overscroll-behavior-y:none;
+}
+.ui,h1,h2,h3,button,th{font-family:"Inter",system-ui,sans-serif}
+.display{font-family:"Manrope",system-ui,sans-serif}
+p{margin:0 0 1.05em}
+a{color:var(--emeraude)}
+.wrap{max-width:620px;margin:0 auto;padding:0 22px}
+
+/* ───────── Monogramme ───────── */
+.seal{
+  width:52px;height:52px;flex:0 0 52px;display:grid;place-items:center;position:relative;
+  border:1.5px solid currentColor;border-radius:2px;transform:rotate(-2deg);
+}
+.seal::after{
+  content:"";position:absolute;inset:4px;border:1px solid currentColor;opacity:.35;border-radius:1px;
+}
+.seal b{font-family:"Inter",sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;line-height:1;transform:rotate(2deg)}
+.seal.sm{width:34px;height:34px;flex:0 0 34px}
+.seal.sm b{font-size:9px}
+
+/* ───────── Couverture ───────── */
+#cover{
+  min-height:100dvh;background:var(--noir);color:#EDF2EF;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:max(38px,env(safe-area-inset-top)) 0 38px;
+  background-image:radial-gradient(120% 70% at 50% 0%,rgba(6,182,212,.22),transparent 62%);
+}
+#cover .wrap{width:100%}
+.cov-top{display:flex;align-items:center;gap:14px;color:var(--or)}
+.cov-top .meta{font-family:"Inter",sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;line-height:1.45;color:#CBD5E1}
+.cov-top .meta i{display:block;font-style:normal;color:var(--or)}
+.cov-mid{padding:44px 0}
+.cov-mid h1{
+  font-family:"Manrope",system-ui,sans-serif;font-weight:800;font-size:clamp(38px,11vw,64px);
+  line-height:.99;letter-spacing:-.025em;margin:0 0 22px;
+}
+.cov-mid h1 em{font-style:normal;font-weight:600;display:block;color:#CBD5E1}
+.rule-or{width:64px;height:2px;background:var(--or);margin:0 0 22px}
+.cov-mid p{font-size:18.5px;color:#CBD5E1;max-width:30em;margin:0}
+.devise{
+  font-family:"Inter",system-ui,sans-serif;font-style:normal;font-weight:600;font-size:15px;color:var(--or);
+  border-top:1px solid rgba(6,182,212,.28);padding-top:16px;margin-bottom:22px;
+}
+.cta{
+  display:block;width:100%;background:var(--or);color:var(--noir);border:none;cursor:pointer;
+  font-family:"Inter",sans-serif;font-size:16.5px;font-weight:600;
+  padding:17px;border-radius:3px;transition:transform .12s,background .15s;
+}
+.cta:hover{background:#22D3EE}
+.cta:active{transform:scale(.985)}
+.cta:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* ───────── Sélecteur ───────── */
+#setup{min-height:100dvh;display:none;flex-direction:column;justify-content:center;padding:44px 0}
+#setup h2{font-family:"Manrope",serif;font-weight:600;font-size:28px;margin:0 0 8px;letter-spacing:-.02em}
+#setup .lede{color:var(--soft);font-size:16.5px;margin-bottom:26px}
+.choice{
+  width:100%;text-align:left;cursor:pointer;background:var(--card);
+  border:1px solid var(--rule);border-radius:5px;padding:16px 18px;margin-bottom:9px;
+  color:inherit;display:flex;align-items:center;gap:14px;
+  transition:border-color .15s,box-shadow .15s,transform .12s;
+}
+.choice:hover{border-color:var(--emeraude);box-shadow:var(--shadow)}
+.choice:active{transform:scale(.99)}
+.choice:focus-visible{outline:2px solid var(--emeraude);outline-offset:2px}
+.choice .txt{flex:1}
+.choice b{display:block;font-family:"Inter",sans-serif;font-weight:600;font-size:16.5px;margin-bottom:2px}
+.choice span{font-size:15px;color:var(--soft);font-family:"Inter",serif}
+.choice .arw{color:var(--rule);font-size:20px;transition:color .15s}
+.choice:hover .arw{color:var(--emeraude)}
+
+/* ───────── Lecteur ───────── */
+#reader{display:none;padding-bottom:96px}
+.topbar{
+  position:sticky;top:0;z-index:30;background:rgba(244,245,242,.93);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+  padding-top:env(safe-area-inset-top);
+}
+.topbar .wrap{display:flex;align-items:center;gap:12px;height:54px}
+.iconbtn{
+  background:none;border:none;cursor:pointer;color:var(--ink);padding:8px;margin:-8px;
+  display:grid;place-items:center;border-radius:4px;
+}
+.iconbtn:focus-visible{outline:2px solid var(--emeraude);outline-offset:0}
+.iconbtn svg{display:block}
+.topmeta{flex:1;min-width:0}
+.topmeta .k{font-family:"Inter",sans-serif;font-size:11.5px;font-weight:600;color:var(--emeraude)}
+.topmeta .t{
+  font-family:"Inter",sans-serif;font-size:14.5px;font-weight:600;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.bar{height:2px;background:var(--rule)}
+.bar i{display:block;height:100%;background:var(--emeraude);width:0;transition:width .35s ease}
+
+.chap{display:none;padding:34px 0 10px;animation:in .32s ease both}
+.chap.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.chap{animation:none}}
+.chap-k{
+  display:inline-flex;align-items:center;gap:8px;font-family:"Inter",sans-serif;
+  font-size:12px;font-weight:600;color:var(--emeraude);margin-bottom:12px;
+}
+.chap-k s{width:22px;height:1px;background:var(--emeraude);opacity:.45;text-decoration:none}
+.chap h2{
+  font-family:"Manrope",system-ui,sans-serif;font-weight:700;color:var(--ink);font-size:clamp(28px,7.2vw,38px);
+  line-height:1.08;letter-spacing:-.025em;margin:0 0 18px;
+}
+.chap h3{font-size:18px;font-weight:600;margin:32px 0 10px;letter-spacing:-.01em}
+.lead{font-size:19px;color:#475569;margin-bottom:22px}
+ul,ol{margin:0 0 1.1em;padding-left:1.2em}
+li{margin-bottom:.5em}
+
+/* étapes */
+.steps{list-style:none;padding:0;margin:24px 0}
+.step{background:var(--card);border:1px solid var(--rule);border-radius:5px;margin-bottom:8px;overflow:hidden}
+.step.open{border-color:var(--emeraude);box-shadow:var(--shadow)}
+.sh{
+  display:flex;gap:13px;align-items:center;width:100%;text-align:left;cursor:pointer;
+  background:none;border:none;padding:15px 16px;color:inherit;
+  font-family:"Inter",sans-serif;font-size:16px;font-weight:600;line-height:1.35;
+}
+.sh:focus-visible{outline:2px solid var(--emeraude);outline-offset:-2px}
+.sn{
+  flex:0 0 27px;height:27px;border-radius:3px;background:var(--emeraude-pale);color:var(--emeraude);
+  display:grid;place-items:center;font-size:13.5px;font-weight:600;
+}
+.step.open .sn{background:var(--emeraude);color:#fff}
+.sh .chev{margin-left:auto;color:var(--soft);transition:transform .2s;flex:0 0 auto}
+.step.open .chev{transform:rotate(180deg)}
+.sb{padding:2px 16px 17px 56px;font-size:16.5px}
+.sb[hidden]{display:none}
+.sb p:last-child{margin-bottom:0}
+
+/* encadrés */
+.box{border-radius:5px;padding:16px 18px;margin:24px 0;font-size:16.5px}
+.box p:last-child{margin-bottom:0}
+.box .bt{
+  display:flex;align-items:center;gap:8px;font-family:"Inter",sans-serif;
+  font-weight:600;font-size:14.5px;margin-bottom:7px;
+}
+.warn{background:var(--brique-pale);box-shadow:inset 3px 0 0 var(--brique)}
+.warn .bt{color:var(--brique)}
+.tip{background:var(--emeraude-pale);box-shadow:inset 3px 0 0 var(--emeraude)}
+.tip .bt{color:var(--emeraude)}
+.note{background:var(--or-pale);box-shadow:inset 3px 0 0 var(--or)}
+.note .bt{color:#0E7490}
+
+/* simulateur */
+.sim{background:var(--noir);color:#EDF2EF;border-radius:7px;padding:22px;margin:26px 0;box-shadow:var(--shadow)}
+.sim label{font-family:"Inter",sans-serif;font-size:13px;font-weight:600;color:#94A3B8;display:block;margin-bottom:9px}
+.sim .field{position:relative}
+.sim input{
+  width:100%;font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:34px;letter-spacing:-.02em;
+  padding:8px 44px 8px 0;border:none;border-bottom:1.5px solid rgba(237,242,239,.22);
+  background:transparent;color:#fff;
+}
+.sim input:focus{outline:none;border-bottom-color:var(--or)}
+.sim .cur{position:absolute;right:4px;bottom:12px;font-family:"IBM Plex Mono",monospace;font-size:26px;color:#94A3B8}
+.seg{display:flex;gap:0;margin:20px 0 4px;border:1px solid rgba(237,242,239,.2);border-radius:4px;overflow:hidden}
+.seg button{
+  flex:1;padding:11px 6px;border:none;background:transparent;color:#94A3B8;cursor:pointer;
+  font-family:"Inter",sans-serif;font-size:13.5px;font-weight:600;transition:background .15s,color .15s;
+}
+.seg button[aria-pressed="true"]{background:var(--or);color:var(--noir)}
+.res{margin-top:20px;border-top:1px solid rgba(237,242,239,.16);padding-top:8px}
+.ln{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;font-size:15.5px;color:#CBD5E1}
+.ln span:last-child{font-family:"Inter",sans-serif;font-weight:600;color:#EDF2EF}
+.ln.tot{
+  border-top:1px solid rgba(237,242,239,.16);margin-top:8px;padding-top:15px;
+  font-family:"Inter",sans-serif;font-size:16px;font-weight:600;color:#EDF2EF;
+}
+.ln.tot span:last-child{font-family:"IBM Plex Mono",monospace;font-size:31px;color:var(--or);font-weight:700;letter-spacing:-.02em}
+.simnote{font-size:14.5px;color:#94A3B8;margin:14px 0 0;line-height:1.5}
+
+/* tableau */
+.tbl{width:100%;border-collapse:collapse;margin:22px 0;font-size:15.5px;background:var(--card);border-radius:5px;overflow:hidden;box-shadow:var(--shadow)}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--rule)}
+.tbl th{font-size:12.5px;font-weight:600;color:var(--soft);background:#FAFBF9}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr.me td{background:var(--or-pale);font-weight:600}
+
+/* échéances */
+.ech{list-style:none;padding:0;margin:22px 0}
+.ech li{display:flex;gap:15px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.ech li:last-child{border-bottom:none}
+.ech .d{
+  flex:0 0 74px;font-family:"Inter",sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--emeraude);padding-top:2px;
+}
+.ech .w{flex:1;font-size:16px}
+
+/* checklist */
+.ck{list-style:none;padding:0;margin:22px 0}
+.ck li{
+  display:flex;gap:13px;align-items:flex-start;background:var(--card);border:1px solid var(--rule);
+  border-radius:5px;padding:14px 16px;margin-bottom:8px;font-size:16.5px;transition:border-color .15s;
+}
+.ck li:has(input:checked){border-color:var(--emeraude);background:var(--emeraude-pale)}
+.ck input{width:20px;height:20px;margin-top:3px;accent-color:var(--emeraude);flex:0 0 auto;cursor:pointer}
+.ck label{cursor:pointer}
+.ckbar{display:flex;align-items:center;gap:12px;margin:20px 0 6px}
+.ckbar .n{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:30px;color:var(--emeraude);letter-spacing:-.02em}
+.ckbar .l{font-family:"Inter",sans-serif;font-size:14px;color:var(--soft)}
+
+/* colophon */
+.colo{
+  background:var(--noir);color:#CBD5E1;border-radius:7px;padding:30px 24px;margin:30px 0 10px;text-align:center;
+}
+.colo .seal{margin:0 auto 18px;color:var(--or)}
+.colo .dv{font-family:"Inter",system-ui,sans-serif;font-style:normal;font-weight:600;font-size:17px;color:#EDF2EF;margin:0 0 14px}
+.colo p{font-size:14.5px;line-height:1.6;margin:0 0 10px}
+.colo .fine{font-size:13px;color:#94A3B8;border-top:1px solid rgba(237,242,239,.14);padding-top:14px;margin-top:16px;text-align:left}
+
+/* nav bas */
+.navbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(244,245,242,.94);
+  backdrop-filter:blur(10px);border-top:1px solid var(--rule);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.navbar .wrap{display:flex;gap:10px;height:66px;align-items:center}
+.nb{
+  flex:1;border:1px solid var(--rule);background:var(--card);border-radius:4px;cursor:pointer;
+  font-family:"Inter",sans-serif;font-size:15px;font-weight:600;color:var(--ink);
+  padding:13px 10px;transition:border-color .15s,background .15s;
+}
+.nb:disabled{opacity:.34;cursor:default}
+.nb:not(:disabled):hover{border-color:var(--emeraude)}
+.nb.primary{background:var(--emeraude);border-color:var(--emeraude);color:#fff;flex:1.7}
+.nb.primary:not(:disabled):hover{background:#0891B2}
+.nb:focus-visible{outline:2px solid var(--emeraude);outline-offset:2px}
+
+/* sommaire */
+.scrim{position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:40;opacity:0;pointer-events:none;transition:opacity .22s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;top:0;bottom:0;left:0;width:min(340px,86vw);background:var(--paper);z-index:50;
+  transform:translateX(-101%);transition:transform .26s cubic-bezier(.32,.72,0,1);
+  display:flex;flex-direction:column;box-shadow:0 0 40px rgba(15,23,42,.2);
+}
+.drawer.on{transform:none}
+.dr-top{
+  background:var(--noir);color:#EDF2EF;padding:calc(22px + env(safe-area-inset-top)) 20px 20px;
+  display:flex;align-items:center;gap:13px;
+}
+.dr-top .seal{color:var(--or)}
+.dr-top b{font-family:"Inter",sans-serif;font-size:14.5px;display:block}
+.dr-top span{font-size:13px;color:#94A3B8}
+.dr-list{flex:1;overflow-y:auto;padding:10px 0 20px}
+.dr-item{
+  display:flex;gap:13px;align-items:baseline;width:100%;text-align:left;background:none;border:none;
+  cursor:pointer;padding:12px 20px;color:var(--ink);font-family:"Inter",sans-serif;
+  font-size:15.5px;font-weight:500;line-height:1.35;
+}
+.dr-item i{font-style:normal;font-size:12.5px;color:var(--soft);flex:0 0 20px}
+.dr-item:hover{background:var(--emeraude-pale)}
+.dr-item[aria-current="true"]{color:var(--emeraude);font-weight:600;box-shadow:inset 3px 0 0 var(--emeraude)}
+.dr-item[aria-current="true"] i{color:var(--emeraude)}
+.dr-foot{padding:16px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--rule)}
+.dr-foot .prof{font-family:"Inter",sans-serif;font-size:13px;color:var(--soft)}
+.dr-foot .prof b{display:block;color:var(--ink);font-size:14.5px;margin-top:2px}
+.dr-foot button{
+  margin-top:10px;background:none;border:1px solid var(--rule);border-radius:4px;padding:9px 12px;
+  font-family:"Inter",sans-serif;font-size:13.5px;cursor:pointer;color:var(--ink);width:100%;
+}
+.dr-foot button:hover{border-color:var(--emeraude);color:var(--emeraude)}
+
+/* ===== SER Guides v2 — couche produit ===== */
+:root{--ser-navy:#0F172A;--ser-cyan:#0891B2;--ser-ice:#F8FAFC;--ser-slate:#475569}
+body:before{content:"SER GUIDES";position:fixed;right:10px;bottom:78px;z-index:2;font:700 9px/1 "Inter",sans-serif;letter-spacing:.22em;color:rgba(15,23,42,.16);writing-mode:vertical-rl;pointer-events:none}
+.hero-badge{display:inline-flex;gap:8px;align-items:center;padding:7px 10px;border:1px solid rgba(6,182,212,.35);border-radius:999px;font:600 11px/1 "Inter",sans-serif;color:var(--or);letter-spacing:.04em;margin-bottom:18px}
+.hero-badge:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--or);box-shadow:0 0 0 4px rgba(6,182,212,.12)}
+.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}
+.quick-card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px;box-shadow:var(--shadow)}
+.quick-card b{display:block;font:600 13px/1.2 "Inter",sans-serif;color:var(--soft);margin-bottom:7px}.quick-card strong{font:700 24px/1 "Manrope",serif;color:var(--emeraude)}
+.source-row{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.source-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:7px 10px;font:600 11.5px/1 "Inter",sans-serif;text-decoration:none;color:var(--ink);background:white}.source-pill:hover{border-color:var(--emeraude);color:var(--emeraude)}
+.aid-grid{display:grid;gap:10px;margin:20px 0}.aid-card{background:white;border:1px solid var(--rule);border-radius:8px;padding:17px;position:relative}.aid-card .tag{display:inline-block;font:700 10px/1 "Inter",sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--or-pale);color:#7d5a1f;padding:6px 8px;border-radius:999px;margin-bottom:10px}.aid-card h4{font:700 18px/1.2 "Inter",sans-serif;margin:0 0 7px}.aid-card p{font-size:15.5px;margin:0}.money{font:700 27px/1 "Manrope",serif;color:var(--emeraude);margin:9px 0}.decision{background:linear-gradient(135deg,var(--noir),#0E3040);color:#edf2ef;border-radius:10px;padding:20px;margin:24px 0}.decision h3{margin-top:0;color:white}.decision label{display:block;font:600 12px/1.3 "Inter",sans-serif;color:#a9beb6;margin:14px 0 6px}.decision select,.decision input{width:100%;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:12px;font:500 14px/1 "Inter",sans-serif}.decision option{color:#111}.decision .answer{margin-top:16px;padding:14px;border:1px solid rgba(212,175,55,.35);background:rgba(212,175,55,.08);border-radius:7px;color:#fff;font-size:15px}.mini-kpi{display:flex;gap:9px;overflow:auto;padding-bottom:4px;margin:18px 0}.mini-kpi span{min-width:max-content;border:1px solid var(--rule);background:white;border-radius:999px;padding:8px 11px;font:600 11.5px/1 "Inter",sans-serif;color:var(--soft)}
+@media(min-width:760px){.wrap{max-width:760px}.aid-grid{grid-template-columns:1fr 1fr}.quick-grid{grid-template-columns:repeat(4,1fr)}}
+
+
+/* ───────── Actions & services officiels ───────── */
+.action-link{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;text-decoration:none;
+  background:var(--noir);color:#fff;border:1px solid var(--noir);border-radius:6px;
+  padding:14px 16px;margin:14px 0;font-family:"Inter",system-ui,sans-serif;font-weight:600;font-size:15px;
+  box-shadow:var(--shadow);transition:transform .12s,background .15s,border-color .15s;
+}
+.action-link:hover{background:#111827;border-color:var(--emeraude);transform:translateY(-1px)}
+.action-link.secondary{background:var(--card);color:var(--ink);border-color:var(--rule);box-shadow:none}
+.action-link.secondary:hover{border-color:var(--emeraude);color:#0E7490}
+.action-link small{font:500 12px/1.35 "Inter",system-ui,sans-serif;color:#94A3B8;text-align:right}
+.action-link.secondary small{color:var(--soft)}
+
+.os-cap{padding:11px 15px;background:#fff;color:var(--soft);font:500 12.5px/1.5 "Inter",system-ui,sans-serif;border-top:1px solid var(--rule)}
+.os-cap strong{color:var(--ink)}
+.preflight{display:grid;grid-template-columns:1fr;gap:10px;margin:22px 0}
+.pre-card{background:var(--card);border:1px solid var(--rule);border-radius:7px;padding:16px;box-shadow:0 4px 18px -16px rgba(15,23,42,.35)}
+.pre-card .num{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:4px;background:var(--emeraude-pale);color:#0E7490;font:700 12px "Inter",system-ui,sans-serif;margin-bottom:8px}
+.pre-card h4{font:600 17px/1.3 "Inter",system-ui,sans-serif;margin:0 0 6px;color:var(--ink)}
+.pre-card p{font-size:15.5px;color:var(--soft);margin:0 0 10px}
+.pre-card .mini{display:inline-flex;text-decoration:none;color:#0E7490;font:600 13.5px "Inter",system-ui,sans-serif;border-bottom:1px solid rgba(6,182,212,.35);padding-bottom:2px}
+.pre-card.urgent{border-color:#F59E0B;background:#FFFBEB}.pre-card.urgent .num{background:#FEF3C7;color:#92400E}
+.pre-card.money{border-color:#67E8F9;background:#ECFEFF}
+.path-note{display:flex;gap:12px;padding:14px 15px;border:1px dashed #67E8F9;background:#F0FDFF;border-radius:7px;margin:18px 0;font-size:15px}
+.path-note b{font-family:"Inter",system-ui,sans-serif}
+.region-tool{background:var(--noir);color:#E2E8F0;border-radius:8px;padding:20px;margin:24px 0}
+.region-tool h3{margin:0 0 6px;color:#fff}.region-tool p{color:#CBD5E1;font-size:15.5px}.region-tool label{display:block;font:600 12px "Inter",system-ui,sans-serif;color:#94A3B8;margin:12px 0 6px}
+.region-tool select{width:100%;padding:12px 13px;border-radius:5px;border:1px solid #334155;background:#fff;color:var(--ink);font:600 14px "Inter",system-ui,sans-serif}
+.region-result{margin-top:12px;padding:12px 13px;border-radius:5px;background:#111827;border:1px solid #334155;font-size:14.5px;color:#E2E8F0}
+.region-result strong{color:#67E8F9}
+.keyline{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0}.keyline>div{background:#fff;border:1px solid var(--rule);padding:12px;border-radius:6px}.keyline b{display:block;font:700 20px "Manrope",serif;color:#0E7490}.keyline span{font:500 12.5px "Inter",system-ui,sans-serif;color:var(--soft)}
+@media(max-width:560px){.keyline{grid-template-columns:1fr}}
+
+/* ───────── Diagnostic personnalisé ───────── */
+#setup{min-height:100dvh;display:none;padding:34px 0 56px;background:linear-gradient(180deg,#F8FAFC 0%,#F1F5F9 100%)}
+.diag-shell{max-width:720px;margin:0 auto;padding:0 22px}
+.diag-brand{display:flex;align-items:center;gap:12px;margin-bottom:30px}.diag-brand .seal{color:var(--emeraude)}
+.diag-brand b{display:block;font:700 14px "Inter",system-ui,sans-serif}.diag-brand span{display:block;font:500 12px "Inter",system-ui,sans-serif;color:var(--soft)}
+.diag-topline{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:10px}.diag-stepcount{font:700 12px "Inter",system-ui,sans-serif;color:#0891B2;text-transform:uppercase;letter-spacing:.04em}.diag-mini{font:600 12px "Inter",system-ui,sans-serif;color:var(--soft)}
+.diag-progress{height:5px;background:#E2E8F0;border-radius:99px;overflow:hidden;margin-bottom:28px}.diag-progress i{display:block;height:100%;width:14.28%;background:var(--emeraude);transition:width .25s ease}
+.diag-panel{display:none}.diag-panel.on{display:block;animation:in .22s ease both}.diag-panel h2{font-family:"Manrope",serif;font-size:clamp(29px,6vw,40px);line-height:1.08;margin:0 0 10px;letter-spacing:-.025em}.diag-panel>.lede{font-size:17px;color:var(--soft);margin-bottom:22px}
+.diag-options{display:grid;gap:9px}.diag-option{display:flex;align-items:flex-start;gap:13px;width:100%;text-align:left;padding:15px 16px;border:1px solid var(--rule);background:#fff;border-radius:7px;cursor:pointer;color:var(--ink);font-family:"Inter",system-ui,sans-serif;transition:.15s}.diag-option:hover{border-color:#67E8F9;box-shadow:var(--shadow)}.diag-option.sel{border-color:var(--emeraude);box-shadow:0 0 0 2px rgba(6,182,212,.10);background:#ECFEFF}.diag-option .dot{width:20px;height:20px;border:1.5px solid #CBD5E1;border-radius:50%;flex:0 0 20px;margin-top:1px;display:grid;place-items:center}.diag-option.sel .dot{border-color:var(--emeraude)}.diag-option.sel .dot:after{content:"";width:10px;height:10px;background:var(--emeraude);border-radius:50%}.diag-option b{display:block;font-size:15.5px;margin-bottom:2px}.diag-option small{display:block;font:400 14px/1.45 "Inter",serif;color:var(--soft)}
+.diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.diag-field label{display:block;font:700 12px "Inter",system-ui,sans-serif;color:var(--soft);margin-bottom:6px}.diag-field input,.diag-field select{width:100%;padding:13px 13px;border:1px solid var(--rule);border-radius:6px;background:#fff;color:var(--ink);font:600 15px "Inter",system-ui,sans-serif}.diag-field input:focus,.diag-field select:focus{outline:2px solid rgba(6,182,212,.2);border-color:var(--emeraude)}
+.diag-help{font-size:14px;color:var(--soft);margin-top:10px}.diag-nav{display:flex;gap:10px;margin-top:26px}.diag-nav button{border:1px solid var(--rule);background:#fff;color:var(--ink);padding:13px 16px;border-radius:6px;cursor:pointer;font:700 14px "Inter",system-ui,sans-serif}.diag-nav .grow{flex:1;background:var(--noir);border-color:var(--noir);color:#fff}.diag-nav .grow:hover{background:#1E293B}.diag-error{display:none;background:#FEF2F2;color:#991B1B;border:1px solid #FECACA;padding:10px 12px;border-radius:6px;margin-top:12px;font:600 13px "Inter",system-ui,sans-serif}.diag-error.on{display:block}
+.diag-result{display:none}.diag-result.on{display:block}.plan-hero{background:var(--noir);color:#E2E8F0;border-radius:10px;padding:22px;margin-bottom:16px}.plan-hero .eyebrow{font:700 11px "Inter",system-ui,sans-serif;color:#67E8F9;text-transform:uppercase;letter-spacing:.08em}.plan-hero h2{font:600 32px/1.04 "Manrope",serif;color:#fff;margin:8px 0 10px}.plan-hero p{margin:0;color:#CBD5E1;font-size:15.5px}.plan-list{display:grid;gap:10px}.plan-item{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:16px}.plan-item.urgent{border-color:#F59E0B;background:#FFFBEB}.plan-item.good{border-color:#67E8F9;background:#ECFEFF}.plan-item .tag{display:inline-flex;padding:4px 7px;border-radius:4px;background:#E2E8F0;font:700 10px "Inter",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#475569;margin-bottom:7px}.plan-item.urgent .tag{background:#FEF3C7;color:#92400E}.plan-item.good .tag{background:#CFFAFE;color:#0E7490}.plan-item h3{font-size:16.5px;margin:0 0 5px}.plan-item p{font-size:15px;color:var(--soft);margin:0 0 9px}.plan-item a{font:700 13px "Inter",system-ui,sans-serif;text-decoration:none}.plan-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.plan-summary div{background:#fff;border:1px solid var(--rule);padding:11px;border-radius:7px}.plan-summary b{display:block;font:700 18px "Manrope",serif;color:#0E7490}.plan-summary span{font:600 11px "Inter",system-ui,sans-serif;color:var(--soft)}
+@media(max-width:620px){.diag-grid,.plan-summary{grid-template-columns:1fr}.diag-shell{padding:0 18px}.diag-nav{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(248,250,252,0),#F8FAFC 26%);padding-top:26px;padding-bottom:max(8px,env(safe-area-inset-bottom))}}
+
+/* ───────── V5 · Entrée express ───────── */
+#quickSetup{display:block}
+#diagWizard{display:none}
+.quick-kicker{font:700 11px/1 "Inter",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0891B2;margin-bottom:10px}
+.quick-title{font:750 clamp(30px,7vw,44px)/1.05 "Manrope",system-ui,sans-serif;margin:0 0 10px;letter-spacing:-.03em}
+.quick-lede{font:400 17px/1.55 "Inter",system-ui,sans-serif;color:var(--soft);margin:0 0 22px}
+.quick-screen{display:none}.quick-screen.on{display:block;animation:in .2s ease both}
+.quick-options{display:grid;gap:10px;margin:18px 0}
+.quick-choice{display:flex;align-items:center;gap:14px;width:100%;border:1px solid var(--rule);background:#fff;border-radius:12px;padding:17px;text-align:left;cursor:pointer;color:var(--ink);transition:.15s;box-shadow:0 6px 20px -18px rgba(15,23,42,.35)}
+.quick-choice:hover{border-color:#67E8F9;transform:translateY(-1px)}
+.quick-choice.sel{border-color:#06B6D4;background:#ECFEFF;box-shadow:0 0 0 2px rgba(6,182,212,.08)}
+.quick-icon{width:38px;height:38px;border-radius:10px;background:#F1F5F9;display:grid;place-items:center;font:800 15px "IBM Plex Mono",monospace;color:#0F172A;flex:0 0 38px}
+.quick-choice.sel .quick-icon{background:#CFFAFE;color:#0E7490}
+.quick-choice b{display:block;font:700 16px/1.25 "Manrope",system-ui,sans-serif;margin-bottom:3px}
+.quick-choice small{display:block;font:400 14px/1.4 "Inter",system-ui,sans-serif;color:var(--soft)}
+.quick-actions{display:flex;gap:10px;margin-top:22px}
+.quick-actions button{border:1px solid var(--rule);border-radius:9px;padding:13px 15px;background:#fff;color:var(--ink);font:700 14px "Inter",system-ui,sans-serif;cursor:pointer}
+.quick-actions .primary{flex:1;background:#0F172A;color:#fff;border-color:#0F172A}
+.quick-plan{background:#0F172A;color:#E2E8F0;border-radius:14px;padding:20px;margin-bottom:14px}
+.quick-plan .eyebrow{font:700 11px "Inter",system-ui,sans-serif;color:#67E8F9;text-transform:uppercase;letter-spacing:.08em}
+.quick-plan h2{font:750 29px/1.06 "Manrope",system-ui,sans-serif;color:#fff;margin:7px 0 8px}
+.quick-plan p{font:400 15px/1.5 "Inter",system-ui,sans-serif;color:#CBD5E1;margin:0}
+.quick-tasks{display:grid;gap:9px;margin:14px 0}
+.quick-task{display:flex;gap:12px;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:14px 15px}
+.quick-task .n{width:26px;height:26px;border-radius:7px;background:#ECFEFF;color:#0E7490;display:grid;place-items:center;font:700 12px "IBM Plex Mono",monospace;flex:0 0 26px}
+.quick-task b{display:block;font:700 15px "Manrope",system-ui,sans-serif;margin-bottom:3px}.quick-task span{display:block;font:400 13.5px/1.45 "Inter",system-ui,sans-serif;color:var(--soft)}
+.quick-advanced{display:block;width:100%;margin-top:10px;background:none;border:0;color:#0E7490;text-decoration:underline;text-underline-offset:3px;font:650 13.5px "Inter",system-ui,sans-serif;cursor:pointer}
+.quick-note{font:400 12.5px/1.5 "Inter",system-ui,sans-serif;color:var(--soft);text-align:center;margin-top:12px}
+
+
+
+/* ───────── FINAL · commercial release ───────── */
+.release-strip{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 0}
+.release-strip span{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(103,232,249,.28);background:rgba(8,145,178,.08);color:#CFFAFE;border-radius:999px;padding:7px 10px;font:700 11px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em}
+.scope-note{margin:18px 0 0;padding:12px 14px;border:1px solid rgba(148,163,184,.22);border-radius:8px;background:rgba(255,255,255,.05);color:#CBD5E1;font:500 12.5px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.service-card{margin:18px 0;border:1px solid var(--rule);background:#fff;border-radius:10px;padding:16px;box-shadow:var(--shadow)}
+.service-card .eyebrow{font:800 10px/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0891B2;margin-bottom:8px}
+.service-card h3{margin:0 0 6px;font:800 18px/1.25 system-ui,-apple-system,"Segoe UI",sans-serif}
+.service-card p{margin:0;color:var(--soft);font-size:15px}
+.version-line{font:600 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--soft);margin-top:16px}
+@media print{#cover,#setup,.topbar,.navbar,.drawer,.scrim{display:none!important}#reader{display:block!important;padding:0}.chap{display:block!important;page-break-before:always;animation:none}.chap:first-child{page-break-before:auto}.wrap{max-width:760px}.action-link{color:#000;background:#fff;border:1px solid #CBD5E1}.action-link small{color:#475569}}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════ COUVERTURE ══════════ -->
+<section id="cover">
+  <div class="wrap cov-top">
+    <div class="seal"><b>SER</b></div>
+    <div class="meta"><i>Guide 01</i>SER Guides · Collection Administratif & Finance<br>Édition 2026</div>
+  </div>
+  <div class="wrap cov-mid">
+    <div class="hero-badge">GUIDE WEB INTERACTIF · DONNÉES VÉRIFIÉES LE 12 SEPT. 2026</div>
+    <h1 class="display">Micro-entreprise<em>optimiser puis déclarer</em></h1>
+    <div class="rule-or"></div>
+    <p>Avant de déclarer, sécurisez d’abord les choix qui peuvent vous faire économiser de l’argent : ACRE, ARE/ARCE, régime fiscal, TVA, prix et aides. Ensuite, suivez les démarches Urssaf et impôts pas à pas, avec des liens directs vers les services officiels.
+    <div class="release-strip"><span>✓ 2026 vérifié</span><span>✓ parcours personnalisé</span><span>✓ simulateurs intégrés</span><span>✓ liens officiels</span></div>
+    <div class="scope-note"><strong>Périmètre :</strong> micro-entreprise classique en France métropolitaine (vente, services BIC, libéral BNC, Cipav). Les DROM, activités réglementées particulières, meublés de tourisme et situations mixtes complexes peuvent suivre des règles spécifiques.</div></p>
+  </div>
+  <div class="wrap">
+    <p class="devise">« Décider juste. Agir simple. »</p>
+    <button class="cta" id="go">Construire mon parcours en 30 secondes</button>
+  </div>
+</section>
+
+<!-- ══════════ DIAGNOSTIC PERSONNALISÉ ══════════ -->
+<section id="setup">
+  <div class="diag-shell">
+    <div class="diag-brand"><div class="seal sm"><b>SER</b></div><div><b>SER Guides · Diagnostic 2026</b><span>Vos réponses restent dans votre navigateur.</span></div></div>
+    <div id="quickSetup">
+      <section class="quick-screen on" id="quickStage">
+        <div class="quick-kicker">30 secondes · aucun compte requis</div>
+        <h2 class="quick-title">Où en êtes-vous ?</h2>
+        <p class="quick-lede">On vous montre d’abord uniquement ce qui est utile maintenant. Vous pourrez affiner plus tard si vous le souhaitez.</p>
+        <div class="quick-options" id="quickStageOptions">
+          <button type="button" class="quick-choice" data-stage="before"><span class="quick-icon">01</span><span><b>Je vais créer ma micro</b><small>Je veux éviter les mauvais choix avant de commencer.</small></span></button>
+          <button type="button" class="quick-choice" data-stage="created"><span class="quick-icon">02</span><span><b>Ma micro est déjà créée</b><small>Je veux vérifier que je n’ai rien oublié et organiser mes déclarations.</small></span></button>
+          <button type="button" class="quick-choice" data-stage="declare"><span class="quick-icon">03</span><span><b>Je dois déclarer maintenant</b><small>Je veux aller rapidement à l’Urssaf ou aux impôts sans me tromper.</small></span></button>
+        </div>
+      </section>
+
+      <section class="quick-screen" id="quickActivity">
+        <div class="quick-kicker">Dernière question</div>
+        <h2 class="quick-title">Quelle est votre activité principale ?</h2>
+        <p class="quick-lede">C’est tout ce qu’il nous faut pour adapter les taux et les rubriques du guide.</p>
+        <div class="quick-options" id="quickActivityOptions">
+          <button type="button" class="quick-choice" data-activity="vente"><span class="quick-icon">V</span><span><b>Vente de marchandises</b><small>Achat-revente, e-commerce, restauration, hébergement.</small></span></button>
+          <button type="button" class="quick-choice" data-activity="serviceBIC"><span class="quick-icon">S</span><span><b>Services commerciaux</b><small>Nettoyage, livraison, conseil commercial, services BIC…</small></span></button>
+          <button type="button" class="quick-choice" data-activity="artisan"><span class="quick-icon">A</span><span><b>Services artisanaux</b><small>Bâtiment, coiffure, réparation, dépannage, métiers artisanaux…</small></span></button>
+          <button type="button" class="quick-choice" data-activity="bnc"><span class="quick-icon">L</span><span><b>Activité libérale</b><small>Développeur, consultant, graphiste, rédacteur, coach…</small></span></button>
+          <button type="button" class="quick-choice" data-activity="cipav"><span class="quick-icon">C</span><span><b>Profession relevant de la Cipav</b><small>Professions réglementées ou rattachées à la Cipav.</small></span></button>
+        </div>
+        <div class="quick-actions"><button type="button" id="quickBack">Retour</button></div>
+      </section>
+
+      <section class="quick-screen" id="quickResult">
+        <div class="quick-plan"><div class="eyebrow">Votre parcours express</div><h2 id="quickResultTitle">Votre guide est prêt</h2><p id="quickResultText">—</p></div>
+        <div class="quick-tasks" id="quickTasks"></div>
+        <div class="quick-actions"><button type="button" id="quickEdit">Modifier</button><button type="button" class="primary" id="quickOpen">Ouvrir mon guide</button></div>
+        <button type="button" class="quick-advanced" id="quickAdvanced">Affiner mes aides et options (facultatif · 2 min)</button>
+        <p class="quick-note">Vous pouvez commencer immédiatement. Le diagnostic avancé sert uniquement à affiner ACRE, France Travail, fiscalité, TVA et aides locales.</p>
+      </section>
+    </div>
+
+    <div id="diagWizard">
+      <div class="diag-topline"><div class="diag-stepcount" id="diagStepCount">Étape 1 sur 7</div><div class="diag-mini">≈ 2 min</div></div>
+      <div class="diag-progress"><i id="diagBar"></i></div>
+
+      <section class="diag-panel on" data-diag-step="0">
+        <h2>Quelle activité allez-vous exercer ?</h2><p class="lede">Cela détermine vos taux sociaux, votre abattement fiscal, vos seuils et les rubriques du guide qui vous concernent.</p>
+        <div class="diag-options" id="diagActivity">
+          <button type="button" class="diag-option" data-value="vente"><span class="dot"></span><span><b>Vente de marchandises</b><small>Achat-revente, e-commerce, restauration, hébergement.</small></span></button>
+          <button type="button" class="diag-option" data-value="serviceBIC"><span class="dot"></span><span><b>Prestations de services commerciales (BIC)</b><small>Nettoyage, transport, services commerciaux et activités assimilées.</small></span></button>
+          <button type="button" class="diag-option" data-value="artisan"><span class="dot"></span><span><b>Prestations artisanales (BIC)</b><small>Bâtiment, coiffure, réparation, dépannage, métiers artisanaux.</small></span></button>
+          <button type="button" class="diag-option" data-value="bnc"><span class="dot"></span><span><b>Activité libérale — régime général</b><small>Développeur, consultant, graphiste, rédacteur, coach…</small></span></button>
+          <button type="button" class="diag-option" data-value="cipav"><span class="dot"></span><span><b>Profession libérale relevant de la Cipav</b><small>Professions réglementées ou rattachées à la Cipav.</small></span></button>
+        </div><div class="diag-error" id="err0">Choisissez votre type d’activité.</div>
+      </section>
+
+      <section class="diag-panel" data-diag-step="1">
+        <h2>Où en êtes-vous aujourd’hui ?</h2><p class="lede">Le guide doit savoir si certaines décisions sont encore à prendre ou si un délai est déjà en cours.</p>
+        <div class="diag-options" id="diagStage">
+          <button type="button" class="diag-option" data-value="before"><span class="dot"></span><span><b>Je n’ai pas encore créé ma micro-entreprise</b><small>Vous êtes au meilleur moment pour optimiser avant toute formalité.</small></span></button>
+          <button type="button" class="diag-option" data-value="created"><span class="dot"></span><span><b>Elle est déjà créée</b><small>Le diagnostic vérifiera les délais encore ouverts.</small></span></button>
+        </div>
+        <div class="diag-field" id="creationDateWrap" style="display:none;margin-top:16px"><label for="creationDate">Date de début d’activité</label><input type="date" id="creationDate" min="2025-01-01" max="2026-12-31"><p class="diag-help">La date permet notamment de calculer votre échéance ACRE à 60 jours en 2026.</p></div>
+        <div class="diag-error" id="err1">Indiquez où vous en êtes et, si vous avez déjà créé, la date de début d’activité.</div>
+      </section>
+
+      <section class="diag-panel" data-diag-step="2">
+        <h2>Pouvez-vous entrer dans un cas ACRE ?</h2><p class="lede">Depuis 2026, l’ACRE n’est plus automatique : il faut être éligible et déposer la demande dans les 60 jours.</p>
+        <div class="diag-field"><label for="acreCriterion">Situation au moment de la création</label><select id="acreCriterion"><option value="">Choisir…</option><option value="are">Demandeur d’emploi indemnisé</option><option value="ft6">Demandeur d’emploi non indemnisé, inscrit 6 mois sur les 18 derniers mois</option><option value="rsa">Bénéficiaire du RSA ou de l’ASS</option><option value="young">18 à 25 ans révolus</option><option value="u30">Moins de 30 ans non indemnisé faute de durée suffisante</option><option value="u30h">Moins de 30 ans reconnu handicapé</option><option value="judicial">Reprise d’une entreprise en sauvegarde/redressement/liquidation</option><option value="cape">Titulaire d’un CAPE remplissant les conditions</option><option value="qpv">Création/reprise en QPV</option><option value="prepare">Bénéficiaire de la PreParE</option><option value="zfrr">Activité en ZFRR ou ZFRR+</option><option value="none">Aucune de ces situations</option></select></div>
+        <div class="diag-field" style="margin-top:14px"><label for="acreRecent">Avez-vous bénéficié de l’ACRE au cours des 3 dernières années ?</label><select id="acreRecent"><option value="">Choisir…</option><option value="no">Non</option><option value="yes">Oui</option><option value="unknown">Je ne sais pas</option></select></div>
+        <div class="diag-error" id="err2">Renseignez ces deux éléments pour que le diagnostic puisse évaluer l’ACRE.</div>
+      </section>
+
+      <section class="diag-panel" data-diag-step="3">
+        <h2>Avez-vous des droits France Travail ?</h2><p class="lede">ARE et ARCE répondent à deux stratégies de trésorerie différentes et ne se cumulent pas entre elles.</p>
+        <div class="diag-options" id="diagFT">
+          <button type="button" class="diag-option" data-value="are"><span class="dot"></span><span><b>Oui, j’ai des droits ARE</b><small>Le guide vous fera comparer maintien mensuel et ARCE en capital.</small></span></button>
+          <button type="button" class="diag-option" data-value="registered"><span class="dot"></span><span><b>Je suis inscrit à France Travail mais sans ARE</b><small>Vous pouvez tout de même être concerné par certains dispositifs.</small></span></button>
+          <button type="button" class="diag-option" data-value="none"><span class="dot"></span><span><b>Non</b><small>Le guide ne vous encombrera pas avec ARE / ARCE.</small></span></button>
+        </div><div class="diag-error" id="err3">Choisissez votre situation France Travail.</div>
+      </section>
+
+      <section class="diag-panel" data-diag-step="4">
+        <h2>Votre foyer peut-il accéder au versement libératoire ?</h2><p class="lede">Pour 2026, le critère de RFR repose sur votre revenu fiscal de référence 2024 et votre nombre de parts.</p>
+        <div class="diag-grid"><div class="diag-field"><label for="diagRfr">RFR 2024 (€)</label><input type="number" id="diagRfr" min="0" step="100" placeholder="Ex. 24 500"></div><div class="diag-field"><label for="diagParts">Nombre de parts fiscales</label><input type="number" id="diagParts" min="0.5" step="0.25" value="1"></div></div>
+        <p class="diag-help">Le plafond 2026 est de 29 315 € par part. Le diagnostic vérifie ce critère mais ne remplace pas la vérification finale des autres conditions.</p>
+        <div class="diag-error" id="err4">Saisissez votre RFR 2024 et votre nombre de parts.</div>
+      </section>
+
+      <section class="diag-panel" data-diag-step="5">
+        <h2>Quel niveau d’activité prévoyez-vous ?</h2><p class="lede">On s’en sert pour détecter les cas où la micro mérite d’être comparée au réel et pour anticiper la TVA.</p>
+        <div class="diag-grid"><div class="diag-field"><label for="diagCA">CA annuel estimé (€)</label><input type="number" id="diagCA" min="0" step="1000" value="30000"></div><div class="diag-field"><label for="diagCosts">Frais professionnels annuels (€)</label><input type="number" id="diagCosts" min="0" step="500" value="5000"></div></div>
+        <p class="diag-help">Incluez vos outils, matières, logiciels, déplacements, commissions, sous-traitance, local, matériel amorti économiquement, etc.</p>
+        <div class="diag-error" id="err5">Renseignez une estimation de chiffre d’affaires et de frais.</div>
+      </section>
+
+      <section class="diag-panel" data-diag-step="6">
+        <h2>Où sera située l’activité ?</h2><p class="lede">Les aides et parcours d’accompagnement varient selon le territoire.</p>
+        <div class="diag-field"><label for="diagRegion">Région</label><select id="diagRegion"><option value="">Choisir…</option><option>Auvergne-Rhône-Alpes</option><option>Bourgogne-Franche-Comté</option><option>Bretagne</option><option>Centre-Val de Loire</option><option>Corse</option><option>Grand Est</option><option>Hauts-de-France</option><option>Île-de-France</option><option>Normandie</option><option>Nouvelle-Aquitaine</option><option>Occitanie</option><option>Pays de la Loire</option><option>Provence-Alpes-Côte d’Azur</option></select></div>
+        <p class="diag-help">Le guide utilisera cette information pour vous orienter vers les dispositifs territoriaux. Cette édition applique les taux standards de métropole ; les DROM suivent des barèmes sociaux spécifiques.</p>
+        <div class="diag-error" id="err6">Choisissez votre région.</div>
+      </section>
+
+      <div class="diag-nav" id="diagNav"><button type="button" id="diagBack">Retour</button><button type="button" class="grow" id="diagNext">Continuer</button></div>
+    </div>
+
+    <section class="diag-result" id="diagResult">
+      <div class="plan-hero"><div class="eyebrow">Votre diagnostic SER · 2026</div><h2>Votre plan avant de commencer</h2><p id="planIntro">—</p></div>
+      <div class="plan-summary" id="planSummary"></div>
+      <div class="plan-list" id="planList"></div>
+      <div class="diag-nav"><button type="button" id="diagRestart">Modifier mes réponses</button><button type="button" class="grow" id="startGuide">Ouvrir mon guide personnalisé</button></div>
+    </section>
+  </div>
+</section>
+
+<!-- ══════════ LECTEUR ══════════ -->
+<main id="reader">
+  <div class="topbar">
+    <div class="wrap">
+      <button class="iconbtn" id="menu" aria-label="Sommaire">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 5.5h15M3 10.5h15M3 15.5h10"/></svg>
+      </button>
+      <div class="topmeta">
+        <div class="k" id="tk">Étape 1</div>
+        <div class="t" id="tt">—</div>
+      </div>
+      <div class="seal sm" style="color:var(--emeraude)"><b>SER</b></div>
+    </div>
+    <div class="bar"><i id="barfill"></i></div>
+  </div>
+
+  <div class="wrap">
+
+  <article class="chap" data-t="Avant toute démarche : aides & argent">
+    <span class="chap-k"><s></s>À faire avant de déclarer</span>
+    <h2 class="display">Commencez par ce qui peut vous faire économiser de l’argent</h2>
+    <p class="lead">Avant la première déclaration — et, pour certains choix, avant même de créer ou d’engager une dépense — vérifiez ces points. L’objectif est d’éviter le « j’aurais dû le faire avant ».</p>
+    <div class="service-card"><div class="eyebrow">Les changements 2026 à connaître</div><h3>Trois règles ont un impact immédiat</h3><p><strong>Seuils micro :</strong> 203 100 € en vente et 83 600 € en services. <strong>ACRE :</strong> demande sous 60 jours ; pour une création à partir du 1er juillet 2026, exonération ramenée à 25 %. <strong>Facturation électronique :</strong> réception obligatoire depuis le 1er septembre 2026 ; émission pour les micro-entreprises à partir du 1er septembre 2027.</p></div>
+
+    <div class="preflight">
+      <div class="pre-card urgent"><span class="num">1</span><h4>Vérifiez d’abord que la micro‑entreprise est bien le bon régime</h4><p>Si vos charges réelles sont élevées, si vous achetez beaucoup de matériel ou si votre activité doit grossir vite, la simplicité de la micro peut coûter plus cher qu’un régime réel. Faites la comparaison avant de vous enfermer dans un mauvais choix.</p><a class="mini" href="https://entreprendre.service-public.fr/vosdroits/R18323" target="_blank" rel="noopener">Comparer les statuts avec le simulateur officiel ↗</a></div>
+      <div class="pre-card urgent"><span class="num">2</span><h4>ACRE : ne laissez pas passer le délai</h4><p>Depuis le 1er janvier 2026, l’ACRE doit être demandée à l’Urssaf dans les 60 jours suivant le début d’activité. Pour une création à compter du 1er juillet 2026, le taux de cotisations pendant l’ACRE correspond à 75 % du taux normal, soit une exonération de 25 %. Une création antérieure au 1er juillet 2026 relève d’un niveau de réduction différent : vérifiez votre date de début sur l’Urssaf.</p><a class="mini" href="https://www.urssaf.fr/accueil/exoneration-acre-createur.html" target="_blank" rel="noopener">Vérifier et demander l’ACRE sur l’Urssaf ↗</a></div>
+      <div class="pre-card money"><span class="num">3</span><h4>Si vous avez des droits chômage : comparez ARE et ARCE avant de choisir</h4><p>L’ARCE représente 60 % du capital correspondant aux droits ARE restants, avec une déduction de 3 % pour le financement des retraites complémentaires, puis un versement en deux fois. Le second intervient 6 mois après le premier sous conditions. ARE et ARCE sont deux stratégies différentes et ne se cumulent pas ; l’ARCE suppose notamment de bénéficier de l’ACRE.</p><a class="mini" href="https://www.francetravail.fr/candidat/je-creereprends-une-entreprise/les-aides-financieres-creation-d/aide-a-la-reprise-et-a-la-creati.html" target="_blank" rel="noopener">Comparer ARE / ARCE sur France Travail ↗</a></div>
+      <div class="pre-card"><span class="num">4</span><h4>Versement libératoire : décidez avant l’échéance, pas par défaut</h4><p>Pour une création, l’option peut être exercée lors de la formalité ou au plus tard le dernier jour du 3e mois suivant celui de la création. Si vous êtes déjà en activité, la date clé est le 30 septembre pour une application l’année suivante. En 2026, le plafond de RFR 2024 est de 29 315 € par part.</p><a class="mini" href="https://www.impots.gouv.fr/professionnel/le-versement-liberatoire" target="_blank" rel="noopener">Vérifier les conditions officielles ↗</a></div>
+      <div class="pre-card"><span class="num">5</span><h4>TVA : fixez vos prix en sachant quand vous pourrez basculer</h4><p>Les seuils de franchise actuellement publiés sont de 85 000 € / 93 500 € pour les ventes et 37 500 € / 41 250 € pour les autres prestations. Un prix fixé sans anticiper la TVA peut réduire votre marge le jour du basculement.</p><a class="mini" href="https://www.economie.gouv.fr/entreprises/gerer-sa-fiscalite-et-ses-impots/autres-impots-et-taxes/entreprises-pouvez-vous-beneficier-de-la-franchise-de-tva" target="_blank" rel="noopener">Voir les seuils TVA officiels ↗</a></div>
+      <div class="pre-card"><span class="num">6</span><h4>Compte dédié, assurance et organisation : mettez la structure en place dès le départ</h4><p>Un compte dédié devient obligatoire pour l’entrepreneur individuel lorsque le chiffre d’affaires dépasse 10 000 € pendant deux années consécutives ; certaines activités imposent aussi une assurance professionnelle. Même avant l’obligation, séparer les flux simplifie la preuve des encaissements et la trésorerie.</p><a class="mini" href="https://entreprendre.service-public.fr/vosdroits/F21118" target="_blank" rel="noopener">Vérifier la règle du compte dédié ↗</a></div>
+      <div class="pre-card money"><span class="num">7</span><h4>Aides territoriales : cherchez avant de payer une dépense</h4><p>Les régions, départements et collectivités peuvent financer un accompagnement, une garantie, un prêt d’honneur, un microcrédit ou certaines dépenses. Certains dispositifs exigent un dépôt avant l’achat ou avant une étape du projet.</p><a class="mini" href="https://entreprendre.service-public.fr/vosdroits/F35930" target="_blank" rel="noopener">Rechercher les aides par territoire dans la base de référence ↗</a></div>
+    </div>
+
+    <div class="region-tool">
+      <h3>Les aides locales : cherchez par territoire</h3>
+      <p>Les dispositifs changent selon la région, le département, la commune et la date. Sélectionnez votre région pour mémoriser votre territoire, puis utilisez la page officielle de recherche de financements et d’accompagnements.</p>
+      <label for="regionSel">Région</label>
+      <select id="regionSel">
+        <option value="">Choisir…</option>
+        <option>Auvergne-Rhône-Alpes</option><option>Bourgogne-Franche-Comté</option><option>Bretagne</option><option>Centre-Val de Loire</option><option>Corse</option><option>Grand Est</option><option>Hauts-de-France</option><option>Île-de-France</option><option>Normandie</option><option>Nouvelle-Aquitaine</option><option>Occitanie</option><option>Pays de la Loire</option><option>Provence-Alpes-Côte d’Azur</option>
+      </select>
+      <div class="region-result" id="regionResult">Sélectionnez une région.</div>
+      <a class="action-link" style="margin-bottom:0" href="https://entreprendre.service-public.fr/vosdroits/F35930" target="_blank" rel="noopener"><span>Rechercher les aides et financements ↗</span><small>Service Public Entreprendre</small></a>
+    </div>
+  </article>
+
+  <article class="chap" data-t="Avant toute démarche : optimiser votre net">
+    <span class="chap-k"><s></s>À faire avant de déclarer</span>
+    <h2 class="display">Construisez votre stratégie de net avant le premier encaissement</h2>
+    <p class="lead">La déclaration n’optimise rien à elle seule. L’optimisation se décide en amont : régime, option fiscale, prix, TVA, frais, aides et trésorerie.</p>
+    <div class="decision">
+      <h3>Test express : vos frais réels dépassent-ils l’abattement micro ?</h3>
+      <label for="mca">CA annuel estimé</label><input id="mca" type="number" value="30000" min="0" step="1000">
+      <label for="mch">Frais professionnels annuels réels</label><input id="mch" type="number" value="5000" min="0" step="500">
+      <label for="mtype">Votre activité</label><select id="mtype"><option value="vente">Vente — abattement fiscal 71 %</option><option value="service">Services BIC — abattement 50 %</option><option value="bnc">BNC — abattement 34 %</option></select>
+      <div class="answer" id="manswer">Renseignez vos montants : le guide compare vos frais réels à l’abattement fiscal théorique.</div>
+    </div>
+    <div class="box warn"><span class="bt">⚠ Ce test n’est pas une conclusion fiscale</span><p>Comparer frais réels et abattement permet seulement de repérer les cas où une simulation micro / réel mérite d’être faite. Les cotisations, la TVA, la protection sociale, la comptabilité et la situation du foyer comptent aussi.</p></div>
+    <div class="keyline"><div><b id="reservePct">—</b><span>réserve minimale recommandée sur chaque encaissement pour cotisations + CFP, selon votre activité</span></div><div><b>3 poches</b><span>exploitation · charges/impôts · réserve de sécurité</span></div></div>
+    <h3>Ordre de décision recommandé</h3>
+    <ol class="steps">
+      <li class="step"><button class="sh"><span class="sn">1</span><span>Comparer micro / réel / autre forme avant l’immatriculation ou avant un changement</span></button><div class="sb" hidden><p>Commencez par le simulateur de statut officiel. Si vos frais sont structurels, ne choisissez pas la micro uniquement parce qu’elle est simple.</p><a class="mini" href="https://entreprendre.service-public.fr/vosdroits/R18323" target="_blank" rel="noopener">Ouvrir le simulateur ↗</a></div></li>
+      <li class="step"><button class="sh"><span class="sn">2</span><span>Déterminer les aides et droits avant les dépenses sensibles</span></button><div class="sb" hidden><p>ACRE, France Travail, aides régionales, QPV/FRR ou aides sectorielles n’ont pas les mêmes déclencheurs. Cherchez d’abord, dépensez ensuite.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">3</span><span>Choisir versement libératoire et périodicité en connaissance de cause</span></button><div class="sb" hidden><p>Le versement libératoire peut être utile pour un foyer imposable mais défavorable dans d’autres cas. La périodicité mensuelle peut faciliter le suivi de trésorerie et, selon l’Urssaf, est conseillée pour certains demandeurs d’emploi ou bénéficiaires de minima sociaux.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">4</span><span>Fixer vos prix avec cotisations, TVA future et temps non facturé</span></button><div class="sb" hidden><p>Votre tarif doit intégrer les cotisations, la CFP, l’impôt, les outils, le temps commercial, les périodes non facturées et une marge de sécurité. Sinon le chiffre d’affaires peut paraître bon alors que votre revenu réel est faible.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">5</span><span>Automatiser la provision dès chaque encaissement</span></button><div class="sb" hidden><p>Transférez immédiatement la réserve calculée vers un compte ou une poche séparée. Ce qui reste après cette provision est beaucoup plus proche de ce que vous pouvez réellement utiliser.</p></div></li>
+    </ol>
+    <a class="action-link secondary" href="https://entreprendre.service-public.fr/vosdroits/R19567" target="_blank" rel="noopener"><span>Simuler officiellement les revenus d’un indépendant ↗</span><small>Service Public Entreprendre</small></a>
+  </article>
+
+  <!-- 1 -->
+  <article class="chap" data-t="Les deux déclarations">
+    <span class="chap-k"><s></s>Chapitre 1</span>
+    <h2 class="display">Les deux déclarations qu'on confond tout le temps</h2>
+    <p class="lead">Le point essentiel : la déclaration sociale Urssaf et la déclaration fiscale annuelle sont deux démarches distinctes. Les confondre entraîne la plupart des erreurs de débutant.</p><div class="path-note"><span>↗</span><div><b>Pas encore immatriculé ?</b><br>Ne passez pas par un site privé payant par erreur. La création, modification et cessation d’entreprise passent par le Guichet unique officiel.</div></div><a class="action-link secondary" href="https://formalites.entreprises.gouv.fr/" target="_blank" rel="noopener"><span>Ouvrir le Guichet unique officiel ↗</span><small>formalites.entreprises.gouv.fr</small></a>
+    <p><strong>La déclaration URSSAF</strong> porte sur le chiffre d'affaires encaissé sur un mois ou un trimestre. Elle sert à calculer vos cotisations sociales. Vous la faites 12 fois ou 4 fois par an.</p>
+    <p><strong>La déclaration de revenus</strong>, formulaire 2042-C-PRO, porte sur le chiffre d’affaires de l’année civile précédente. Elle se fait au printemps suivant : au printemps 2026 vous déclarez les revenus 2025 ; si vous démarrez en 2026, votre chiffre d’affaires 2026 sera déclaré au printemps 2027.</p>
+    <div class="box warn"><span class="bt">⚠ La déclaration Urssaf ne remplace jamais la déclaration fiscale</span>
+      <p>La déclaration Urssaf et la déclaration fiscale restent deux démarches distinctes. Vous devez vérifier que votre chiffre d’affaires annuel figure dans la bonne rubrique de la 2042‑C‑PRO, y compris si vous avez choisi le versement libératoire.</p></div>
+    <h3>Ce que vous déclarez, exactement</h3>
+    <p>Toujours le chiffre d'affaires <strong>encaissé</strong>, jamais facturé. Une facture émise en décembre et payée en janvier se déclare en janvier.</p>
+    <p>Et toujours le montant <strong>brut</strong>, sans rien déduire : ni frais, ni matériel, ni déplacements, ni commissions de plateforme. C'est la logique du régime micro — vous ne déduisez rien, en échange l'administration applique un abattement forfaitaire à votre place.</p>
+  </article>
+
+  <!-- 2 -->
+  <article class="chap" data-t="La déclaration URSSAF">
+    <span class="chap-k"><s></s>Chapitre 2</span>
+    <h2 class="display">Votre déclaration URSSAF, pas à pas</h2>
+    <p class="lead">Cinq minutes. Il vous faut le total encaissé sur la période et vos identifiants.</p>
+    <div class="service-card"><div class="eyebrow">Service officiel</div><h3>Auto-Entrepreneur Urssaf</h3><p>Préparez le total réellement encaissé sur la période. Le bouton ci-dessous ouvre le service officiel dans un nouvel onglet ; gardez ce guide ouvert à côté.</p></div>
+    <a class="action-link" href="https://www.autoentrepreneur.urssaf.fr/" target="_blank" rel="noopener"><span>Ouvrir mon compte Auto‑Entrepreneur Urssaf ↗</span><small>Site officiel<br>autoentrepreneur.urssaf.fr</small></a>
+
+    <ol class="steps">
+      <li class="step"><button class="sh"><span class="sn">1</span><span>Connectez-vous à votre espace</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Cliquez sur le bouton « Ouvrir mon compte Auto‑Entrepreneur Urssaf » juste au-dessus. Vous arrivez sur le service officiel <strong>autoentrepreneur.urssaf.fr</strong>, puis utilisez « Mon compte » / « Se connecter » selon l’intitulé affiché. Vos identifiants vous ont été envoyés à l'immatriculation.</p>
+        <p>Identifiant perdu ? Le lien « Identifiants oubliés » les renvoie sur l'adresse mail déclarée à la création. Vérifiez vos spams, le mail atterrit souvent là.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">2</span><span>Ouvrez « Déclarer et payer »</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Dans le menu principal, cliquez sur <strong>Déclarer et payer</strong>. La période à déclarer s'affiche automatiquement, vous n'avez pas à la choisir.</p>
+        <p>Aucune période n'apparaît ? C'est normal dans deux cas : vous êtes dans vos 90 premiers jours d'activité, ou vous avez déjà déclaré cette période.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">3</span><span>Saisissez votre chiffre d'affaires</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Un champ apparaît, intitulé selon votre activité. <strong id="s3"></strong></p>
+        <p>Entrez le total encaissé sur la période, arrondi à l'euro. Pas de centimes, pas d'espaces.</p>
+        <p>Plusieurs activités de natures différentes ? Plusieurs champs s'affichent : ventilez chaque euro dans la bonne ligne. Se tromper de ligne, c'est se tromper de taux.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">4</span><span>Vérifiez le montant calculé</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>L'écran affiche vos cotisations. Le taux appliqué doit être <strong id="s4"></strong>.</p>
+        <p>Si le taux affiché ne correspond pas, ne validez pas : votre activité est probablement mal codée chez l'URSSAF. Contactez-les avant l'échéance.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">5</span><span>Payez et gardez l'accusé</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Télépaiement ou carte bancaire. Le prélèvement part à la date d'échéance, pas le jour de la déclaration.</p>
+        <p>Téléchargez l'accusé de réception et rangez-le. C'est votre preuve en cas de litige, et il vous servira pour un prêt, une location ou une demande d'aide.</p></div></li>
+    </ol>
+    <div class="box warn"><span class="bt">⚠ Zéro euro se déclare aussi</span>
+      <p>Aucun encaissement sur la période ? Vous devez quand même déclarer 0. Une déclaration manquante ou tardive peut entraîner une pénalité et, en cas d'absences répétées, des régularisations sur une base forfaitaire. Le montant peut évoluer : vérifiez l'information affichée par l'Urssaf au moment de votre échéance.</p></div>
+  </article>
+
+  <!-- 3 -->
+  <article class="chap" data-t="Ce qu'il vous reste">
+    <span class="chap-k"><s></s>Chapitre 3</span>
+    <h2 class="display">Combien il vous reste, réellement</h2>
+    <p class="lead">Votre chiffre d'affaires n'est pas votre revenu. Entrez ce que vous avez encaissé.</p>
+    <div class="sim">
+      <label for="ca">Chiffre d'affaires encaissé sur la période</label>
+      <div class="field"><input type="number" id="ca" value="3000" min="0" step="100" inputmode="numeric"><span class="cur">€</span></div>
+      <div class="seg" id="segvl">
+        <button data-vl="0" aria-pressed="true">Sans versement libératoire</button>
+        <button data-vl="1" aria-pressed="false">Avec</button>
+      </div>
+      <div class="res" id="res"></div>
+    </div>
+    <div class="box tip"><span class="bt">◆ La règle qui sauve la trésorerie</span>
+      <p>Provisionnez le jour de l'encaissement, pas le jour de l'échéance. À chaque virement client reçu, mettez immédiatement le pourcentage de côté sur un compte séparé. En trimestriel, ce sont trois mois de cotisations qui tombent d'un coup — c'est là que les gens se font avoir.</p></div>
+    <h3>Les taux 2026, toutes activités</h3>
+    <table class="tbl"><thead><tr><th>Activité</th><th>Cotisations</th><th>Vers. lib.</th></tr></thead><tbody id="rates"></tbody></table>
+    <p style="font-size:15px;color:var(--soft)">S'ajoute la contribution à la formation professionnelle (CFP) : 0,1 % pour les commerçants, 0,2 % pour les professions libérales et certaines prestations commerciales, 0,3 % pour les artisans. Le diagnostic distingue désormais services commerciaux et artisanaux pour éviter de sous-estimer cette contribution.</p>
+  </article>
+
+  <!-- 4 -->
+  <article class="chap" data-t="Vos échéances">
+    <span class="chap-k"><s></s>Chapitre 4</span>
+    <h2 class="display">Vos échéances de l'année</h2>
+    <p class="lead">Choisissez votre rythme de déclaration pour voir vos dates.</p>
+    <div class="seg" id="segr" style="border-color:var(--rule)">
+      <button data-r="trim" aria-pressed="true">Trimestriel</button>
+      <button data-r="mens" aria-pressed="false">Mensuel</button>
+    </div>
+    <div id="cal"></div>
+    <div class="box note"><span class="bt">● Vos 90 premiers jours</span>
+      <p>Votre première déclaration n'intervient qu'après un délai minimum de 90 jours d'activité. En mensuel, vous déclarez le mois suivant ces trois mois, en cumulant les périodes écoulées. En trimestriel, à l'échéance du trimestre civil qui suit. Ne vous inquiétez pas de ne rien voir avant.</p></div>
+    <p>Le choix entre mensuel et trimestriel se fait à la création et vaut pour l'année civile. Vous pouvez le modifier avant le 31 janvier, pour une prise d'effet au 1<sup>er</sup> janvier suivant.</p>
+    <h3>Les deux autres dates de l'année</h3>
+    <ul>
+      <li><strong>Déclaration de revenus</strong> — entre avril et juin, date limite selon votre département.</li>
+      <li><strong>CFE</strong> — pas de CFE à payer l’année de création, mais pensez à la déclaration initiale 1447-C-SD avant le 31 décembre de cette année. L’année suivante, la base d’imposition bénéficie en principe d’une réduction de 50 %. Si vous n’avez aucun local et que votre CA annuel ne dépasse pas 5 000 €, vous pouvez être exonéré. L’avis est dématérialisé dans l’espace professionnel impots.gouv.fr.</li>
+    </ul>
+    <a class="action-link secondary" href="https://entreprendre.service-public.fr/vosdroits/F23999" target="_blank" rel="noopener"><span>Vérifier votre CFE et les exonérations ↗</span><small>Service Public Entreprendre</small></a>
+  </article>
+
+  <!-- 5 -->
+  <article class="chap" data-t="La 2042-C-PRO">
+    <span class="chap-k"><s></s>Chapitre 5</span>
+    <h2 class="display">La 2042-C-PRO, pas à pas</h2>
+    <p class="lead">Une fois la bonne rubrique identifiée, la logique est simple : déclarer le chiffre d’affaires annuel brut dans la catégorie correspondant à votre activité.</p>
+    <div class="box note"><span class="bt">● Attention à l’année déclarée</span><p>Le millésime 2026 de la 2042-C-PRO concerne les revenus 2025. Si votre activité a commencé en 2026, vous utiliserez la déclaration mise à disposition au printemps 2027 pour déclarer votre chiffre d’affaires 2026.</p></div>
+    <div class="service-card"><div class="eyebrow">Service officiel</div><h3>Déclaration de revenus sur impots.gouv.fr</h3><p>Vous déclarez votre chiffre d’affaires annuel dans votre déclaration personnelle. Ouvrez votre espace Finances publiques, puis gardez les étapes ci-dessous sous les yeux.</p></div>
+    <a class="action-link" href="https://cfspart.impots.gouv.fr/" target="_blank" rel="noopener"><span>Me connecter à mon espace Finances publiques ↗</span><small>Connexion officielle<br>impots.gouv.fr</small></a>
+<a class="action-link secondary" href="https://www.impots.gouv.fr/node/12190" target="_blank" rel="noopener"><span>Ouvrir le pas‑à‑pas DGFiP 2026 ↗</span><small>Aide officielle</small></a>
+</div>
+<a class="action-link secondary" href="https://www.impots.gouv.fr/www2/fichiers/documentation/brochure/ir_2026/pdf_som/2042-CPRO.pdf" target="_blank" rel="noopener"><span>Ouvrir la 2042‑C‑PRO 2026 · revenus 2025 ↗</span><small>DGFiP · Cerfa 11222*28</small></a>
+    <ol class="steps">
+      <li class="step"><button class="sh"><span class="sn">1</span><span>Connectez-vous à impots.gouv.fr</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Espace particulier, avec votre numéro fiscal. C'est bien votre déclaration <em>personnelle</em> : en micro-entreprise, votre activité n'a pas de déclaration séparée.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">2</span><span>Faites apparaître le bon formulaire</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>À l'étape 3 du parcours, cochez la case <strong>« Revenus des professions non salariées »</strong>. C'est elle qui fait apparaître la déclaration complémentaire 2042-C-PRO. Sans elle, vous ne trouverez jamais où saisir votre chiffre d'affaires.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">3</span><span>Trouvez votre rubrique</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p id="s5r"></p><p>Puis choisissez la sous-partie correspondant à votre situation : avec ou sans versement libératoire. Ce ne sont pas les mêmes cases.</p></div></li>
+      <li class="step"><button class="sh"><span class="sn">4</span><span>Saisissez le montant brut</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Reportez votre chiffre d'affaires <strong>brut encaissé sur l'année civile</strong>. Pas le bénéfice, pas le net après cotisations. Le brut, celui-là même que vous avez déclaré à l'URSSAF, cumulé sur 12 mois.</p><p id="s5a"></p></div></li>
+      <li class="step"><button class="sh"><span class="sn">5</span><span>Ne remplissez pas une case « prélèvements sociaux » par automatisme</span><svg class="chev" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 5.5L7.5 9.5L11.5 5.5"/></svg></button>
+        <div class="sb" hidden><p>Les cases 5HY à 5JY appartiennent à une rubrique spécifique relative à des revenus à soumettre aux prélèvements sociaux. Le chiffre d'affaires courant d'une micro-entreprise se déclare dans les rubriques micro-BIC ou micro-BNC prévues à cet effet. N'inscrivez rien dans 5HY par réflexe : utilisez la notice 2042-C-PRO 2026 ou l'aide en ligne si une situation particulière vous concerne.</p></div></li>
+    </ol>
+    <div class="box tip"><span class="bt">◆ Vérification en dix secondes</span>
+      <p>Avant de valider, le total saisi doit être exactement égal à la somme de vos déclarations URSSAF de l'année. Ouvrez vos accusés et additionnez. Si ça ne tombe pas juste, cherchez l'écart maintenant — pas dans trois ans, lors d'un contrôle.</p></div>
+  </article>
+
+  <!-- 6 -->
+  <article class="chap" data-t="Versement libératoire">
+    <span class="chap-k"><s></s>Chapitre 6</span>
+    <h2 class="display">Versement libératoire : pour vous ou pas</h2>
+    <p class="lead">Payer son impôt au fil de l'eau, en même temps que ses cotisations. Bonne idée pour certains, argent perdu pour d'autres.</p>
+    <p>L'option consiste à régler votre impôt sur le revenu sous forme d'un pourcentage supplémentaire du chiffre d'affaires. Tout est payé en temps réel : pas d'acompte, pas de solde l'année suivante.</p>
+    <p id="vlr"></p>
+    <h3>Le test simple</h3>
+    <p>L'éligibilité ne dit pas si l'option est avantageuse. Son intérêt dépend de l'ensemble des revenus du foyer, du quotient familial, des réductions et crédits d'impôt, ainsi que du chiffre d'affaires attendu. Un foyer non imposable a souvent intérêt à éviter le versement libératoire, mais un foyer imposable n'y gagne pas automatiquement : comparez les deux scénarios avant d'opter.</p>
+    <div class="box warn"><span class="bt">⚠ Le piège le plus fréquent du statut</span>
+      <p>Ne choisissez pas cette option par réflexe. Le test du RFR vérifie seulement l'éligibilité : il faut ensuite comparer le coût du versement libératoire avec l'impôt qui résulterait du barème progressif dans votre foyer.</p></div>
+    <p>Pour en bénéficier, votre revenu fiscal de référence de l'année N-2 ne doit pas dépasser un plafond par part de quotient familial. Le renoncement se demande <strong>avant le 30 septembre</strong>, pour une prise d'effet l'année suivante.</p>
+  </article>
+
+  <!-- 7 -->
+  <article class="chap" data-t="TVA et plafonds">
+    <span class="chap-k"><s></s>Chapitre 7</span>
+    <h2 class="display">TVA et plafonds : les deux seuils à surveiller</h2>
+    <p class="lead">Deux seuils différents, souvent confondus. Le second est beaucoup plus bas, et c'est celui qui surprend.</p>
+    <h3>Le plafond de votre régime</h3>
+    <p id="plaf"></p>
+    <p>Un dépassement pendant deux années civiles consécutives fait basculer automatiquement vers un régime réel d'imposition. Ce n'est pas une catastrophe, mais ça change toute votre comptabilité : anticipez plutôt que de le découvrir.</p>
+    <h3>La franchise de TVA</h3>
+    <p>En 2026, les seuils nationaux de franchise en base sont notamment de <strong>85 000 €</strong> (année précédente) et <strong>93 500 €</strong> (année en cours) pour les ventes, et <strong>37 500 €</strong> / <strong>41 250 €</strong> pour les autres prestations de services. Si le seuil majoré de l’année en cours est dépassé, la franchise cesse à compter de la date du dépassement.</p>
+    <div class="box note"><span class="bt">● À vérifier avant une grosse facture</span><p>Les règles de TVA ont beaucoup évolué politiquement depuis 2025. Les seuils ci-dessus sont ceux publiés par Bercy au moment de cette édition. Vérifiez-les avant une opération qui vous ferait franchir un seuil.</p></div>
+    <p>Surveillez votre chiffre d'affaires cumulé dès que vous approchez. Passer la TVA en cours d'année sans l'avoir vu venir, c'est devoir la régulariser sur des factures déjà encaissées, de votre poche.</p>
+  </article>
+
+  <!-- 8 -->
+  <article class="chap" data-t="En cas de contrôle">
+    <span class="chap-k"><s></s>Chapitre 8</span>
+    <h2 class="display">Ce qu'il faut pouvoir montrer en cas de contrôle</h2>
+    <p class="lead">Le régime micro allège la comptabilité. Il ne supprime pas l'obligation d'expliquer votre chiffre d'affaires.</p>
+    <p>À conserver <strong>dix ans</strong> :</p>
+    <ul>
+      <li><strong>Le livre des recettes</strong> — obligatoire, chronologique, détaillé : date, client, montant, mode de règlement.</li>
+      <li><strong>Le registre des achats</strong> — obligatoire pour les activités de vente.</li>
+      <li>Vos factures émises, numérotées sans trou dans la séquence.</li>
+      <li>Vos relevés d'encaissement et attestations de plateformes.</li>
+      <li>Vos accusés de déclaration URSSAF.</li>
+    </ul>
+    <div class="box note"><span class="bt">● Facturation électronique : ce qui est déjà obligatoire au 12 septembre 2026</span>
+      <p>Depuis le <strong>1<sup>er</sup> septembre 2026</strong>, toutes les entreprises assujetties à la TVA, y compris celles en franchise en base, doivent pouvoir <strong>recevoir</strong> des factures électroniques via une plateforme agréée. Pour les micro-entreprises, l'obligation générale d'<strong>émettre</strong> des factures électroniques et de transmettre les données concernées est prévue au <strong>1<sup>er</sup> septembre 2027</strong>. Les opérations bénéficiant d'une exonération de TVA peuvent relever de règles différentes.</p></div>
+    <a class="action-link secondary" href="https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises" target="_blank" rel="noopener"><span>Vérifier le calendrier officiel de facturation électronique ↗</span><small>Ministère de l'Économie</small></a>
+  </article>
+
+
+    <!-- sources -->
+  <article class="chap" data-t="Sources officielles 2026">
+    <span class="chap-k"><s></s>Vérification</span>
+    <h2 class="display">Sources officielles et mises à jour</h2>
+    <p class="lead">Chaque chiffre sensible doit pouvoir être revérifié en un clic. Vérification réalisée le 12 septembre 2026 à partir de sources administratives et institutionnelles de référence. C’est une règle de la collection SER Guides.</p>
+    <div class="source-row">
+      <a class="source-pill" href="https://www.urssaf.fr/accueil/actualites/acre-nouvelles-regles-demarches.html" target="_blank" rel="noopener">Urssaf · ACRE 2026 ↗</a>
+      <a class="source-pill" href="https://www.economie.gouv.fr/entreprises/gerer-sa-micro-entreprise/micro-entreprises-quel-est-le-montant-de-vos-cotisations-sociales" target="_blank" rel="noopener">Bercy · cotisations & ACRE 2026 ↗</a>
+      <a class="source-pill" href="https://entreprendre.service-public.fr/vosdroits/F33339" target="_blank" rel="noopener">Service-Public · taux sociaux 2026 ↗</a>
+      <a class="source-pill" href="https://www.impots.gouv.fr/professionnel/le-versement-liberatoire" target="_blank" rel="noopener">Impôts · versement libératoire ↗</a>
+      <a class="source-pill" href="https://www.economie.gouv.fr/entreprises/gerer-sa-fiscalite-et-ses-impots/autres-impots-et-taxes/entreprises-pouvez-vous-beneficier-de-la-franchise-de-tva" target="_blank" rel="noopener">Bercy · TVA ↗</a>
+      <a class="source-pill" href="https://www.francetravail.fr/candidat/je-creereprends-une-entreprise/les-aides-financieres-creation-d/aide-a-la-reprise-et-a-la-creati.html" target="_blank" rel="noopener">France Travail · ARE / ARCE ↗</a>
+      <a class="source-pill" href="https://www.service-public.fr/particuliers/vosdroits/R55376" target="_blank" rel="noopener">Service-Public · formulaire ACRE ↗</a>
+      <a class="source-pill" href="https://entreprendre.service-public.fr/vosdroits/F35930" target="_blank" rel="noopener">Base nationale des aides par territoire ↗</a>
+      <a class="source-pill" href="https://www.impots.gouv.fr/node/12190" target="_blank" rel="noopener">DGFiP · pas-à-pas déclaration 2026 ↗</a>
+      <a class="source-pill" href="https://www.impots.gouv.fr/www2/fichiers/documentation/brochure/ir_2026/pdf_som/2042-CPRO.pdf" target="_blank" rel="noopener">DGFiP · 2042-C-PRO 2026 (revenus 2025) ↗</a>
+      <a class="source-pill" href="https://formalites.entreprises.gouv.fr/" target="_blank" rel="noopener">Guichet unique · formalités d’entreprise ↗</a>
+      <a class="source-pill" href="https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises" target="_blank" rel="noopener">Bercy · facturation électronique 2026/2027 ↗</a>
+      <a class="source-pill" href="https://www.urssaf.fr/files/live/sites/urssaffr/files/autres/Diaporama_Auto-entrepreneur.pdf" target="_blank" rel="noopener">Urssaf · guide Auto-entrepreneur 2026 ↗</a>
+    </div>
+    <div class="box tip"><span class="bt">◆ Méthode SER Guides</span><p>Les chiffres sensibles sont rattachés à une source administrative et les démarches renvoient vers les services officiels. Les règles peuvent évoluer : utilisez toujours le lien source lorsqu’une décision importante dépend d’un seuil, d’un délai ou d’une éligibilité.</p></div>
+  </article>
+
+  <!-- 9 -->
+  <article class="chap" data-t="Votre checklist">
+    <span class="chap-k"><s></s>Chapitre 9</span>
+    <h2 class="display">Votre checklist</h2>
+    <p class="lead">Neuf points. Si les neuf sont cochés, vous ne risquez plus grand-chose.</p>
+    <div class="ckbar"><span class="n" id="ckn">0</span><span class="l">sur 9 points validés</span></div>
+    <ul class="ck" id="ck">
+      <li><input type="checkbox" id="c1"><label for="c1">Je connais mon taux de cotisations et je l'ai vérifié sur mon espace URSSAF</label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">Mes échéances sont dans mon agenda, avec un rappel une semaine avant</label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">Je provisionne mes cotisations à chaque encaissement, sur un compte séparé</label></li>
+      <li><input type="checkbox" id="c4"><label for="c4">Je déclare même quand mon chiffre d'affaires est à zéro</label></li>
+      <li><input type="checkbox" id="c5"><label for="c5">Mon livre des recettes est à jour et tenu chronologiquement</label></li>
+      <li><input type="checkbox" id="c6"><label for="c6">J'ai tranché la question du versement libératoire selon mon foyer</label></li>
+      <li><input type="checkbox" id="c7"><label for="c7">Je surveille mon chiffre d'affaires cumulé face aux deux seuils</label></li>
+      <li><input type="checkbox" id="c8"><label for="c8">J'ai vérifié ma CFE, l'exonération de première année et la déclaration initiale 1447-C-SD</label></li>
+      <li><input type="checkbox" id="c9"><label for="c9">Je conserve mes accusés et factures, et j’ai vérifié ma capacité à recevoir les factures électroniques depuis le 1er septembre 2026</label></li>
+    </ul>
+  </article>
+
+  <!-- 10 -->
+  <article class="chap" data-t="Colophon">
+    <span class="chap-k"><s></s>Fin du guide</span>
+    <h2 class="display">Vous savez faire.</h2>
+    <p class="lead">Vous avez maintenant un parcours simple pour préparer vos choix, déclarer au bon endroit et vérifier les échéances importantes. Gardez ce guide sous la main à chaque étape.</p>
+    <div class="colo">
+      <div class="seal"><b>SER</b></div>
+      <p class="dv">« Décider juste. Agir simple. »</p>
+      <p>Guide 01 — SER Guides · Collection Administratif & Finance<br>Édition 2026 · Version 1.0 · Vérifiée le 12 septembre 2026</p>
+      <p class="fine"><strong>Guide d’information, pas de conseil juridique, fiscal ou comptable personnalisé.</strong> Les taux, seuils et dates indiqués correspondent aux sources publiques consultées au 12 septembre 2026. La réglementation peut évoluer. Vérifiez toujours le service officiel avant une option irréversible ou une échéance sensible. Les cas DROM, activités réglementées, location meublée, activités mixtes complexes ou situations internationales peuvent nécessiter une vérification spécifique.</p><p class="fine">© 2026 SER Guides. Tous droits réservés. Reproduction, revente ou diffusion non autorisée interdites.</p>
+    </div>
+  </article>
+
+  </div>
+
+  <nav class="navbar"><div class="wrap">
+    <button class="nb" id="prev">Précédent</button>
+    <button class="nb primary" id="next">Étape suivante</button>
+  </div></nav>
+</main>
+
+<!-- ══════════ SOMMAIRE ══════════ -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+  <div class="dr-top">
+    <div class="seal sm"><b>SER</b></div>
+    <div><b>Micro-entreprise : optimiser puis déclarer</b><span>SER Guides · Guide 01 · 2026</span></div>
+  </div>
+  <div class="dr-list" id="drlist"></div>
+  <div class="dr-foot">
+    <div class="prof">Votre activité<b id="pn">—</b></div>
+    <button id="chg">Changer d'activité</button>
+  </div>
+</aside>
+
+<script>
+const P={
+ vente:{name:"Vente de marchandises",cot:12.3,vl:1.0,abat:71,cfp:0.1,plafond:"203 100 €",
+  champ:"Il s'intitule « Vente de marchandises » ou « Chiffre d'affaires — ventes ».",
+  rub:"Descendez jusqu'à la rubrique <strong>« Revenus industriels et commerciaux professionnels »</strong>, catégorie micro-BIC.",
+  ab:"L'administration applique automatiquement l'abattement forfaitaire de <strong>71 %</strong>. Vous ne le calculez pas : vous déclarez le brut, elle s'occupe du reste."},
+ serviceBIC:{name:"Prestations de services commerciales (BIC)",cot:21.2,vl:1.7,abat:50,cfp:0.2,plafond:"83 600 €",
+  champ:"Il s'intitule généralement « Prestations de services commerciales » ou une formulation équivalente selon votre activité.",
+  rub:"Descendez jusqu'à la rubrique <strong>« Revenus industriels et commerciaux professionnels »</strong>, catégorie micro-BIC.",
+  ab:"L'administration applique automatiquement l'abattement forfaitaire de <strong>50 %</strong>. Vous ne le calculez pas : vous déclarez le brut, elle s'occupe du reste."},
+ artisan:{name:"Prestations artisanales (BIC)",cot:21.2,vl:1.7,abat:50,cfp:0.3,plafond:"83 600 €",
+  champ:"Il s'intitule généralement « Prestations de services artisanales » ou une formulation équivalente selon votre activité.",
+  rub:"Descendez jusqu'à la rubrique <strong>« Revenus industriels et commerciaux professionnels »</strong>, catégorie micro-BIC.",
+  ab:"L'administration applique automatiquement l'abattement forfaitaire de <strong>50 %</strong>. Vous ne le calculez pas : vous déclarez le brut, elle s'occupe du reste."},
+ bnc:{name:"Libéral, régime général (BNC)",cot:25.6,vl:2.2,abat:34,cfp:0.2,plafond:"83 600 €",
+  champ:"Il s'intitule « Prestations de services » ou « Activités libérales ».",
+  rub:"Descendez jusqu'à la rubrique <strong>« Revenus non commerciaux professionnels »</strong>, catégorie micro-BNC.",
+  ab:"L'administration applique automatiquement l'abattement forfaitaire de <strong>34 %</strong>. Vous ne le calculez pas : vous déclarez le brut, elle s'occupe du reste."},
+ cipav:{name:"Libéral CIPAV",cot:23.2,vl:2.2,abat:34,cfp:0.2,plafond:"83 600 €",
+  champ:"Il s'intitule « Prestations de services » ou « Activités libérales ».",
+  rub:"Descendez jusqu'à la rubrique <strong>« Revenus non commerciaux professionnels »</strong>, catégorie micro-BNC.",
+  ab:"L'administration applique automatiquement l'abattement forfaitaire de <strong>34 %</strong>. Vous ne le calculez pas : vous déclarez le brut, elle s'occupe du reste."}
+};
+const ALL=[["Vente de marchandises","12,3 %","1 %","vente"],
+ ["Services commerciaux (BIC)","21,2 %","1,7 %","serviceBIC"],
+ ["Services artisanaux (BIC)","21,2 %","1,7 %","artisan"],
+ ["Libéral régime général (BNC)","25,6 %","2,2 %","bnc"],
+ ["Libéral CIPAV","23,2 %","2,2 %","cipav"]];
+
+const $=s=>document.getElementById(s);
+
+const rs=document.getElementById('regionSel');
+if(rs) rs.addEventListener('change',()=>{
+ const v=rs.value,el=document.getElementById('regionResult');
+ el.innerHTML=v?`Territoire sélectionné : <strong>${v}</strong>.<br><span style="color:#94A3B8">Ouvrez la recherche officielle ci-dessous puis filtrez par région, département et commune. Vérifiez toujours la date d’ouverture avant d’engager une dépense.</span>`:'Sélectionnez une région.';
+});
+
+const chaps=[...document.querySelectorAll('.chap')];
+let cur=null,vl=0,ryt='trim',idx=0;
+const eur=n=>Math.round(n).toLocaleString('fr-FR')+' €';
+const pc=n=>String(n).replace('.',',')+' %';
+
+const QUICK={stage:null,activity:null};
+const qStage=$('quickStage'),qActivity=$('quickActivity'),qResult=$('quickResult');
+function qShow(el){[qStage,qActivity,qResult].forEach(x=>x.classList.toggle('on',x===el));window.scrollTo({top:0,behavior:'instant'});}
+document.querySelectorAll('#quickStageOptions .quick-choice').forEach(b=>b.onclick=()=>{QUICK.stage=b.dataset.stage;document.querySelectorAll('#quickStageOptions .quick-choice').forEach(x=>x.classList.toggle('sel',x===b));setTimeout(()=>qShow(qActivity),90);});
+document.querySelectorAll('#quickActivityOptions .quick-choice').forEach(b=>b.onclick=()=>{QUICK.activity=b.dataset.activity;document.querySelectorAll('#quickActivityOptions .quick-choice').forEach(x=>x.classList.toggle('sel',x===b));setTimeout(buildQuickPlan,90);});
+$('quickBack').onclick=()=>qShow(qStage);
+$('quickEdit').onclick=()=>qShow(qStage);
+function buildQuickPlan(){
+  cur=QUICK.activity;const p=P[cur];let title='',text='',tasks=[];
+  if(QUICK.stage==='before'){
+    title='Avant de créer : 3 choses à sécuriser';
+    text=`${p.name}. On commence par les décisions qui peuvent vous faire gagner ou perdre de l’argent, puis seulement par la création.`;
+    tasks=[['Vérifier vos aides et l’ACRE','Avant toute formalité, regardez les droits qui dépendent de votre situation et les délais à respecter.'],['Comparer micro / réel','Si vous avez beaucoup de frais, vérifiez que la micro reste le bon choix avant de vous immatriculer.'],['Fixer vos prix avec vos charges','Le guide vous montre les cotisations, la TVA à anticiper et la réserve à mettre de côté.']];
+  } else if(QUICK.stage==='created'){
+    title='Votre micro existe : sécurisons les choix importants';
+    text=`${p.name}. Vous allez d’abord vérifier les options encore ouvertes, puis organiser vos échéances et vos déclarations.`;
+    tasks=[['Vérifier ce qui est encore récupérable','ACRE, versement libératoire, aides et choix fiscaux selon votre date de création.'],['Mettre votre trésorerie au clair','Calculez ce qui vous reste réellement et provisionnez vos charges.'],['Préparer vos déclarations','Urssaf, impôts, CFE et documents à conserver.']];
+  } else {
+    title='Vous devez déclarer : allons à l’essentiel';
+    text=`${p.name}. Le guide vous emmène vers la bonne déclaration et garde les vérifications importantes à portée de main.`;
+    tasks=[['Identifier la déclaration à faire','Urssaf mensuelle/trimestrielle ou déclaration fiscale annuelle : ce ne sont pas les mêmes démarches.'],['Ouvrir directement le service officiel','Les boutons du guide vous envoient vers l’Urssaf ou impots.gouv.fr.'],['Vérifier avant de valider','Montant encaissé, bonne catégorie d’activité, accusé de réception et provision de trésorerie.']];
+  }
+  $('quickResultTitle').textContent=title;$('quickResultText').textContent=text;
+  $('quickTasks').innerHTML=tasks.map((t,i)=>`<div class="quick-task"><span class="n">${i+1}</span><div><b>${t[0]}</b><span>${t[1]}</span></div></div>`).join('');
+  qShow(qResult);
+}
+$('quickOpen').onclick=()=>{
+  cur=QUICK.activity;localStorage.setItem('serGuide01Quick',JSON.stringify(QUICK));$('setup').style.display='none';$('reader').style.display='block';render();
+  let target=0;if(QUICK.stage==='declare'){const n=chaps.findIndex(c=>c.dataset.t==='Les deux déclarations');target=n>=0?n:0;}
+  show(target);
+};
+$('quickAdvanced').onclick=()=>{$('quickSetup').style.display='none';$('diagWizard').style.display='block';showDiag(0);};
+const DIAG={step:0,activity:null,stage:null,creationDate:'',acreCriterion:'',acreRecent:'',ft:null,rfr:0,parts:1,ca:30000,costs:5000,region:''};
+const diagPanels=[...document.querySelectorAll('.diag-panel')];
+function chooseGroup(id,key){document.querySelectorAll(`#${id} .diag-option`).forEach(b=>b.onclick=()=>{document.querySelectorAll(`#${id} .diag-option`).forEach(x=>x.classList.toggle('sel',x===b));DIAG[key]=b.dataset.value;if(id==='diagStage')document.getElementById('creationDateWrap').style.display=DIAG.stage==='created'?'block':'none';});}
+chooseGroup('diagActivity','activity');chooseGroup('diagStage','stage');chooseGroup('diagFT','ft');
+function showDiag(n){DIAG.step=Math.max(0,Math.min(6,n));diagPanels.forEach((p,i)=>p.classList.toggle('on',i===DIAG.step));$('diagStepCount').textContent=`Étape ${DIAG.step+1} sur 7`;$('diagBar').style.width=((DIAG.step+1)/7*100)+'%';$('diagBack').style.visibility=DIAG.step===0?'hidden':'visible';$('diagNext').textContent=DIAG.step===6?'Voir mon plan':'Continuer';document.querySelectorAll('.diag-error').forEach(e=>e.classList.remove('on'));window.scrollTo({top:0,behavior:'instant'});}
+function validDiag(){let ok=true;const e=$('err'+DIAG.step);if(DIAG.step===0)ok=!!DIAG.activity;if(DIAG.step===1){DIAG.creationDate=$('creationDate').value;ok=!!DIAG.stage&&(DIAG.stage!=='created'||!!DIAG.creationDate)}if(DIAG.step===2){DIAG.acreCriterion=$('acreCriterion').value;DIAG.acreRecent=$('acreRecent').value;ok=!!DIAG.acreCriterion&&!!DIAG.acreRecent}if(DIAG.step===3)ok=!!DIAG.ft;if(DIAG.step===4){DIAG.rfr=+$('diagRfr').value;DIAG.parts=+$('diagParts').value;ok=Number.isFinite(DIAG.rfr)&&DIAG.rfr>=0&&DIAG.parts>=.5}if(DIAG.step===5){DIAG.ca=+$('diagCA').value;DIAG.costs=+$('diagCosts').value;ok=DIAG.ca>=0&&DIAG.costs>=0}if(DIAG.step===6){DIAG.region=$('diagRegion').value;ok=!!DIAG.region}if(!ok&&e)e.classList.add('on');return ok;}
+function addDays(dateStr,d){const x=new Date(dateStr+'T12:00:00');x.setDate(x.getDate()+d);return x;}
+function fdate(d){return d.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});}
+function planItem(kind,tag,title,body,href,label){return `<div class="plan-item ${kind||''}"><span class="tag">${tag}</span><h3>${title}</h3><p>${body}</p>${href?`<a href="${href}" target="_blank" rel="noopener">${label||'Ouvrir le service officiel'} ↗</a>`:''}</div>`;}
+function buildPlan(){cur=DIAG.activity;const p=P[cur],items=[];let urgent=0;const acreEligible=DIAG.acreCriterion&&DIAG.acreCriterion!=='none'&&DIAG.acreRecent==='no';
+if(DIAG.stage==='before'){items.push(planItem('good','À faire d’abord','Ne créez pas avant d’avoir verrouillé vos choix','Vous êtes encore au meilleur moment : comparez le régime, vérifiez les aides, le versement libératoire et votre tarification avant d’envoyer la formalité.','https://formalites.entreprises.gouv.fr/declarer.php','Préparer puis accéder au Guichet unique'));}
+if(acreEligible){urgent++;if(DIAG.stage==='created'){const dl=addDays(DIAG.creationDate,60);items.push(planItem('urgent','Urgent · ACRE',`Demande ACRE à traiter avant le ${fdate(dl)}`,`Votre profil coche un critère d’éligibilité déclaré et vous indiquez ne pas avoir bénéficié de l’ACRE au cours des 3 dernières années. En 2026, la demande doit être adressée à l’Urssaf dans les 60 jours suivant le début d’activité.`, 'https://www.urssaf.fr/accueil/exoneration-acre-createur.html','Vérifier et demander l’ACRE'));}else items.push(planItem('urgent','Avant création · ACRE','Préparez déjà votre dossier ACRE','Votre profil semble entrer dans un critère d’éligibilité. Après la création, téléchargez immédiatement le justificatif du Guichet unique puis déposez la demande dans le délai de 60 jours.','https://www.urssaf.fr/accueil/exoneration-acre-createur.html','Voir la procédure officielle ACRE'));}
+else if(DIAG.acreRecent==='yes')items.push(planItem('','ACRE','ACRE probablement indisponible pour cette création','Vous indiquez en avoir bénéficié au cours des 3 dernières années. La règle 2026 impose notamment de ne pas en avoir bénéficié pendant cette période.','https://www.urssaf.fr/accueil/exoneration-acre-createur.html','Relire les conditions ACRE'));
+else if(DIAG.acreCriterion==='none')items.push(planItem('','ACRE','Aucun critère ACRE identifié','D’après vos réponses, aucun critère d’éligibilité n’a été identifié. Vérifiez néanmoins la liste officielle si votre situation change ou si vous êtes en QPV/ZFRR.','https://www.urssaf.fr/accueil/exoneration-acre-createur.html','Voir les critères officiels'));
+else items.push(planItem('urgent','À vérifier','Historique ACRE à clarifier','Vous ne savez pas si vous avez déjà bénéficié de l’ACRE récemment. Vérifiez ce point avant de compter l’exonération dans votre prévisionnel.','https://www.urssaf.fr/accueil/exoneration-acre-createur.html','Vérifier l’ACRE'));
+if(DIAG.ft==='are'){urgent++;items.push(planItem('urgent','Décision trésorerie','Comparez ARE et ARCE avant de choisir','L’ARCE correspond à 60 % du capital de droits ARE restants, avec une déduction de 3 % pour la retraite complémentaire, puis deux versements. Le maintien ARE conserve un complément mensuel sous conditions. L’ARCE suppose notamment de bénéficier de l’ACRE.','https://www.francetravail.fr/candidat/je-creereprends-une-entreprise/les-aides-financieres-creation-d/aide-a-la-reprise-et-a-la-creati.html','Comparer ARE / ARCE'));}
+else if(DIAG.ft==='registered')items.push(planItem('good','France Travail','Votre inscription peut ouvrir d’autres leviers','Même sans ARE, l’inscription peut compter pour l’ACRE si vous avez été inscrit 6 mois au cours des 18 derniers mois, et France Travail propose aussi des accompagnements à la création.','https://www.francetravail.fr/candidat/je-creereprends-une-entreprise.html','Voir les aides création'));
+const vflLimit=29315*DIAG.parts,vfl=DIAG.rfr<=vflLimit;items.push(planItem(vfl?'good':'','Impôt',vfl?'Critère RFR du versement libératoire : a priori compatible':'Critère RFR du versement libératoire : dépassé',vfl?`Votre RFR 2024 (${eur(DIAG.rfr)}) est inférieur ou égal au plafond calculé pour ${DIAG.parts} part(s), soit ${eur(vflLimit)}. Vérifiez les autres conditions avant d’opter.`:`Votre RFR 2024 (${eur(DIAG.rfr)}) dépasse le plafond calculé de ${eur(vflLimit)} pour ${DIAG.parts} part(s).`, 'https://www.impots.gouv.fr/professionnel/le-versement-liberatoire','Vérifier les conditions fiscales'));
+const forfait=DIAG.ca*p.abat/100;if(DIAG.costs>forfait){urgent++;items.push(planItem('urgent','Rentabilité','Faites chiffrer micro vs réel avant de vous engager',`Vos frais estimés (${eur(DIAG.costs)}) dépassent l’abattement fiscal théorique correspondant à votre activité (${eur(forfait)}). Cela ne tranche pas seul, mais c’est un signal fort pour comparer les régimes.`, 'https://mon-entreprise.urssaf.fr/simulateurs/auto-entrepreneur','Ouvrir le simulateur Urssaf'));}else items.push(planItem('good','Rentabilité','La micro reste cohérente à étudier',`Vos frais estimés (${eur(DIAG.costs)}) restent sous l’abattement fiscal théorique (${eur(forfait)}). La simplicité micro garde un intérêt à étudier avec les cotisations et votre situation fiscale.`, 'https://mon-entreprise.urssaf.fr/simulateurs/auto-entrepreneur','Simuler votre revenu net'));
+const tvaBase=cur==='vente'?85000:37500,tvaMaj=cur==='vente'?93500:41250;if(DIAG.ca>=tvaBase){urgent++;items.push(planItem('urgent','TVA','Construisez vos prix avec la TVA dès maintenant',`Votre CA prévisionnel (${eur(DIAG.ca)}) atteint ou dépasse le seuil de base de franchise de TVA (${eur(tvaBase)}). Le seuil majoré applicable à votre catégorie est ${eur(tvaMaj)}.`, 'https://www.economie.gouv.fr/entreprises/gerer-sa-fiscalite-et-ses-impots/autres-impots-et-taxes/entreprises-pouvez-vous-beneficier-de-la-franchise-de-tva','Vérifier les seuils TVA'));}else if(DIAG.ca>=tvaBase*.8)items.push(planItem('urgent','À anticiper · TVA','Vous approchez du seuil TVA',`Votre prévision représente plus de 80 % du seuil de base de ${eur(tvaBase)}. Fixez vos tarifs de façon à absorber un futur passage à la TVA sans dégrader brutalement votre marge.`, 'https://www.economie.gouv.fr/entreprises/gerer-sa-fiscalite-et-ses-impots/autres-impots-et-taxes/entreprises-pouvez-vous-beneficier-de-la-franchise-de-tva','Voir la règle TVA'));
+items.push(planItem('good','Territoire',`Recherchez les aides en ${DIAG.region}`,`Commencez par le parcours régional, puis filtrez les dispositifs par commune/département. Ne considérez jamais une aide comme acquise avant d’avoir vérifié sa date d’ouverture et l’ordre des démarches.`, 'https://entreprendre.service-public.fr/vosdroits/F35930','Rechercher les aides territoriales'));
+items.push(planItem('','Organisation','Séparez vos flux dès le premier euro','Même si le compte dédié n’est pas immédiatement obligatoire dans tous les cas, séparer encaissements, dépenses et provisions réduit fortement les erreurs. L’obligation vise notamment le dépassement de 10 000 € de CA pendant 2 années consécutives.','https://entreprendre.service-public.fr/vosdroits/F21118','Vérifier la règle du compte dédié'));
+$('planIntro').textContent=`Profil : ${p.name} · ${DIAG.region}. ${urgent?urgent+' point(s) demandent une décision rapide avant de poursuivre.':'Aucune urgence forte détectée, mais vérifiez chaque choix avant la formalité.'}`;$('planSummary').innerHTML=`<div><b>${eur(DIAG.ca)}</b><span>CA annuel estimé</span></div><div><b>${eur(DIAG.costs)}</b><span>frais annuels estimés</span></div><div><b>${pc(p.cot)}</b><span>taux social standard 2026</span></div>`;$('planList').innerHTML=items.join('');$('diagWizard').style.display='none';$('diagResult').classList.add('on');localStorage.setItem('serGuide01Diag',JSON.stringify(DIAG));window.scrollTo({top:0,behavior:'instant'});}
+$('go').onclick=()=>{$('cover').style.display='none';$('setup').style.display='block';$('quickSetup').style.display='block';$('diagWizard').style.display='none';qShow(qStage)};
+$('diagBack').onclick=()=>showDiag(DIAG.step-1);$('diagNext').onclick=()=>{if(!validDiag())return;if(DIAG.step<6)showDiag(DIAG.step+1);else buildPlan();};
+$('diagRestart').onclick=()=>{$('diagResult').classList.remove('on');$('diagWizard').style.display='block';showDiag(0)};
+$('startGuide').onclick=()=>{cur=DIAG.activity;$('setup').style.display='none';$('reader').style.display='block';render();show(0);const rs=$('regionSel');if(rs){rs.value=DIAG.region;rs.dispatchEvent(new Event('change'));}if($('mca')){$('mca').value=DIAG.ca;$('mch').value=DIAG.costs;$('mtype').value=cur==='vente'?'vente':(cur==='serviceBIC'||cur==='artisan')?'service':'bnc';microVsReal();}};
+
+document.querySelectorAll('.sh').forEach(h=>h.onclick=()=>{
+  const s=h.parentElement,b=h.nextElementSibling;
+  b.hidden=!b.hidden;s.classList.toggle('open',!b.hidden);
+});
+
+$('segvl').onclick=e=>{const b=e.target.closest('button');if(!b)return;vl=+b.dataset.vl;
+  [...$('segvl').children].forEach(x=>x.setAttribute('aria-pressed',x===b));calc()};
+$('segr').onclick=e=>{const b=e.target.closest('button');if(!b)return;ryt=b.dataset.r;
+  [...$('segr').children].forEach(x=>x.setAttribute('aria-pressed',x===b));cal()};
+$('ca').oninput=calc;
+$('ck').onchange=()=>$('ckn').textContent=$('ck').querySelectorAll('input:checked').length;
+
+$('prev').onclick=()=>show(idx-1);
+$('next').onclick=()=>show(idx+1);
+$('menu').onclick=()=>toggle(true);
+$('scrim').onclick=()=>toggle(false);
+$('chg').onclick=()=>{toggle(false);$('reader').style.display='none';$('setup').style.display='block';$('diagResult').classList.remove('on');$('diagWizard').style.display='none';$('quickSetup').style.display='block';qShow(qStage);window.scrollTo(0,0)};
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')toggle(false);
+  if($('reader').style.display!=='block'||$('drawer').classList.contains('on'))return;
+  if(e.key==='ArrowRight')show(idx+1);
+  if(e.key==='ArrowLeft')show(idx-1);
+});
+function toggle(on){$('drawer').classList.toggle('on',on);$('scrim').classList.toggle('on',on)}
+
+function show(i){
+  if(i<0||i>=chaps.length)return;
+  idx=i;localStorage.setItem('serGuide01Idx',String(i));localStorage.setItem('serGuide01Reader','1');chaps.forEach((c,n)=>c.classList.toggle('on',n===i));
+  const last=i===chaps.length-1;
+  $('tk').textContent=last?'Fin du guide':`Étape ${i+1} sur ${chaps.length-1}`;
+  $('tt').textContent=chaps[i].dataset.t;
+  $('barfill').style.width=((i+1)/chaps.length*100)+'%';
+  $('prev').disabled=i===0;$('next').disabled=last;
+  $('next').textContent=last?'Terminé':'Étape suivante';
+  [...$('drlist').children].forEach((b,n)=>b.setAttribute('aria-current',n===i));
+  toggle(false);window.scrollTo({top:0,behavior:'instant'});
+}
+
+function calc(){
+  if(!cur)return;const p=P[cur],ca=Math.max(0,+$('ca').value||0);
+  const c=ca*p.cot/100,f=ca*p.cfp/100,i=vl?ca*p.vl/100:0;
+  let h=`<div class="ln"><span>Cotisations sociales · ${pc(p.cot)}</span><span>− ${eur(c)}</span></div>
+  <div class="ln"><span>Formation professionnelle · ${pc(p.cfp)}</span><span>− ${eur(f)}</span></div>`;
+  if(vl)h+=`<div class="ln"><span>Impôt versement libératoire · ${pc(p.vl)}</span><span>− ${eur(i)}</span></div>`;
+  h+=`<div class="ln tot"><span>Il vous reste</span><span>${eur(ca-c-f-i)}</span></div>
+  <p class="simnote">${vl?"Impôt sur le revenu correspondant à ce chiffre d’affaires déjà acquitté via le versement libératoire. La déclaration annuelle de revenus reste obligatoire.":"Impôt sur le revenu non compris. Il sera calculé au printemps sur votre chiffre d'affaires annuel, après abattement de "+p.abat+" %."}</p>`;
+  $('res').innerHTML=h;
+}
+
+function cal(){
+  const t=ryt==='trim'
+   ?[["30 avril","Chiffre d'affaires de janvier, février et mars"],
+     ["31 juillet","Chiffre d'affaires d'avril, mai et juin"],
+     ["31 octobre","Chiffre d'affaires de juillet, août et septembre"],
+     ["31 janvier","Chiffre d'affaires d'octobre, novembre et décembre"]]
+   :[["Chaque mois","Dernier jour du mois suivant. Le chiffre d'affaires de janvier se déclare avant fin février, celui de février avant le 31 mars, et ainsi de suite."],
+     ["12 fois par an","Montants plus petits, rythme plus régulier. Recommandé si vos encaissements sont irréguliers."]];
+  $('cal').innerHTML='<ul class="ech">'+t.map(r=>`<li><span class="d">${r[0]}</span><span class="w">${r[1]}</span></li>`).join('')+'</ul>';
+}
+
+function render(){
+  const p=P[cur];
+  $('pn').textContent=p.name;
+  $('s3').textContent=p.champ;
+  $('s4').textContent=pc(p.cot);
+  $('s5r').innerHTML=p.rub;
+  $('s5a').innerHTML=p.ab;
+  $('vlr').innerHTML=`Pour votre activité, ce pourcentage est de <strong>${pc(p.vl)}</strong> du chiffre d'affaires, ajouté à vos ${pc(p.cot)} de cotisations.`;
+  $('plaf').innerHTML=`Votre plafond annuel de chiffre d'affaires est de <strong>${p.plafond}</strong>, fixé pour la période 2026-2028.`;
+  $('rates').innerHTML=ALL.map(r=>`<tr class="${r[3]===cur?'me':''}"><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+  const rp=$('reservePct'); if(rp)rp.textContent=pc(p.cot+p.cfp);
+  $('drlist').innerHTML=chaps.map((c,n)=>
+    `<button class="dr-item"><i>${n===chaps.length-1?'—':n+1}</i><span>${c.dataset.t}</span></button>`).join('');
+  [...$('drlist').children].forEach((b,n)=>b.onclick=()=>show(n));
+  calc();cal();
+}
+
+function microVsReal(){
+ const ca=Math.max(0,+document.getElementById('mca')?.value||0),ch=Math.max(0,+document.getElementById('mch')?.value||0),t=document.getElementById('mtype')?.value||'service';
+ const abat=t==='vente'?71:t==='service'?50:34,forfait=ca*abat/100;
+ const el=document.getElementById('manswer'); if(!el)return;
+ if(ch>forfait) el.innerHTML=`Vos frais réels (${eur(ch)}) dépassent l’abattement fiscal théorique (${eur(forfait)}). <strong>Faites chiffrer un régime réel</strong> : la micro peut devenir fiscalement moins intéressante.`;
+ else el.innerHTML=`Vos frais réels (${eur(ch)}) restent sous l’abattement fiscal théorique (${eur(forfait)}). <strong>La micro conserve un avantage de simplicité à étudier</strong>, sans que cela suffise à conclure seule.`;
+}
+['mca','mch','mtype'].forEach(id=>document.getElementById(id)?.addEventListener('input',microVsReal)); microVsReal();
+
+
+// Restaurer automatiquement la dernière page ouverte.
+window.addEventListener('load',()=>{
+  try{
+    const savedIdx=parseInt(localStorage.getItem('serGuide01Idx')||'',10);
+    const wasReader=localStorage.getItem('serGuide01Reader')==='1';
+    const savedDiag=localStorage.getItem('serGuide01Diag');
+    const savedQuick=localStorage.getItem('serGuide01Quick');
+    if(wasReader && Number.isFinite(savedIdx)){
+      let activity=null;
+      if(savedDiag){const d=JSON.parse(savedDiag);if(d && d.activity && P[d.activity]){Object.assign(DIAG,d);activity=d.activity;}}
+      if(!activity && savedQuick){const q=JSON.parse(savedQuick);if(q && q.activity && P[q.activity]){Object.assign(QUICK,q);activity=q.activity;}}
+      if(activity){cur=activity;$('cover').style.display='none';$('setup').style.display='none';$('reader').style.display='block';render();show(Math.min(savedIdx,chaps.length-1));}
+    }
+  }catch(e){}
+});
+</script>
+</body>
+</html>

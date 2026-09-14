@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Le bon calendrier de semis dépend de chez toi.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Le bon calendrier de semis dépend de chez toi.\n\n• Région et climat\n• Exposition\n• Cultures et calendrier\n\n📘 SER Guide 06 — Potager adapté à ta région\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

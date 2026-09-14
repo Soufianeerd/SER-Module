@@ -1,0 +1,30 @@
+{
+  "family": "Precision & Repair",
+  "palette": {
+    "background": "#F7F7F5",
+    "text": "#111827",
+    "structure": "#334155",
+    "accent": "#F97316"
+  },
+  "fonts": [
+    "Barlow Condensed",
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "appareil démonté",
+    "outils de précision",
+    "vue éclatée",
+    "pièces numérotées",
+    "tapis de réparation"
+  ],
+  "carousel_rules": {
+    "format": "4:5 portrait",
+    "slides": 3,
+    "slide_1": "hook visuel fort",
+    "slide_2": "valeur concrète",
+    "slide_3": "CTA e-book",
+    "quality": "premium éditorial, instagramable, cohérent avec la niche",
+    "brand": "SER Guides discret et constant"
+  }
+}

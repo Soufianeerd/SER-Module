@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Tu progresses lentement ? Ton ordre d’apprentissage est peut-être mauvais.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Tu progresses lentement ? Ton ordre d’apprentissage est peut-être mauvais.\n\n• Technique\n• Rythme\n• Morceaux adaptés au niveau\n\n📘 SER Guide 14 — Apprendre un instrument en autonomie\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bricolage-renovation",
+  "guide_id": "03",
+  "name": "Bricolage & rénovation",
+  "title": "Rénover sans improviser",
+  "status": "draft",
+  "visual_family": "Precision & Repair",
+  "palette": {
+    "background": "#F7F7F5",
+    "text": "#111827",
+    "structure": "#334155",
+    "accent": "#F97316"
+  },
+  "fonts": [
+    "Barlow Condensed",
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "mètre",
+    "plans",
+    "outils",
+    "matériaux",
+    "coupe technique"
+  ],
+  "purpose": "Aider à choisir la bonne méthode, les bons matériaux et l’ordre des travaux selon le projet."
+}

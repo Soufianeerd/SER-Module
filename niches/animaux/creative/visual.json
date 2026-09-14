@@ -1,0 +1,30 @@
+{
+  "family": "Humain & Accessible",
+  "palette": {
+    "background": "#FAFAFA",
+    "text": "#292524",
+    "structure": "#D1FAE5",
+    "accent": "#9B2C2C"
+  },
+  "fonts": [
+    "Poppins",
+    "Nunito"
+  ],
+  "objects": [
+    "animal",
+    "carnet santé",
+    "gamelle",
+    "jouet",
+    "planning",
+    "photos naturelles"
+  ],
+  "carousel_rules": {
+    "format": "4:5 portrait",
+    "slides": 3,
+    "slide_1": "hook visuel fort",
+    "slide_2": "valeur concrète",
+    "slide_3": "CTA e-book",
+    "quality": "premium éditorial, instagramable, cohérent avec la niche",
+    "brand": "SER Guides discret et constant"
+  }
+}

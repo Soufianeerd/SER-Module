@@ -1,0 +1,29 @@
+{
+  "family": "Learning & Culture",
+  "palette": {
+    "background": "#F8F7FF",
+    "text": "#1E1B4B",
+    "structure": "#4F46E5",
+    "accent": "#FB7185"
+  },
+  "fonts": [
+    "Bricolage Grotesque",
+    "Noto Sans"
+  ],
+  "objects": [
+    "instrument",
+    "partition",
+    "métronome",
+    "écouteurs",
+    "application"
+  ],
+  "carousel_rules": {
+    "format": "4:5 portrait",
+    "slides": 3,
+    "slide_1": "hook visuel fort",
+    "slide_2": "valeur concrète",
+    "slide_3": "CTA e-book",
+    "quality": "premium éditorial, instagramable, cohérent avec la niche",
+    "brand": "SER Guides discret et constant"
+  }
+}

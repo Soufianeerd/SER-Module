@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p27-premium",
+      "status": "ready",
+      "priority": 1,
+      "title": "Vérifier les sources avant de suivre un TikTok fiscal",
+      "slides_dir": "slides/p27",
+      "slides": [
+        "slide1.jpg",
+        "slide2.jpg",
+        "slide3.jpg"
+      ],
+      "caption": "Le vrai bon réflexe : vérifier les sources avant de suivre un TikTok fiscal.\n\nAvant de créer ou gérer ta micro-entreprise, vérifie toujours :\n\n• Urssaf\n• impots.gouv.fr\n• France Travail / Service Public\n\nLe but : éviter les erreurs, comprendre ce qui t’avantage vraiment et agir dans le bon ordre.\n\n📘 SER Guide 01 — Micro-entreprise 2026\n🔗 Guide complet : lien en bio\n\n#microentreprise #autoentrepreneur #urssaf #entrepreneur #fiscalite"
+    }
+  ]
+}

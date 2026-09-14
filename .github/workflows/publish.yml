@@ -1,0 +1,53 @@
+name: SER — publication Instagram automatique
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Tester sans publier
+        required: false
+        type: boolean
+        default: true
+      niche:
+        description: ID niche facultatif
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Publier
+        env:
+          IG_USER_ID_MRLIPTN: ${{ secrets.IG_USER_ID_MRLIPTN }}
+          IG_TOKEN_MRLIPTN: ${{ secrets.IG_TOKEN_MRLIPTN }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          META_API_VERSION: v26.0
+        run: |
+          NICHE="${{ inputs.niche }}"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            if [ -n "$NICHE" ]; then python ser.py dry-run --niche "$NICHE"; else python ser.py dry-run; fi
+          else
+            if [ -n "$NICHE" ]; then python ser.py publish --niche "$NICHE"; else python ser.py publish; fi
+          fi
+      - name: Sauvegarder l'historique
+        if: success() && inputs.dry_run != true
+        run: |
+          git config user.name "SER Instagram Bot"
+          git config user.email "actions@github.com"
+          git add state/history.json
+          git commit -m "SER: historique publication $(date -u +'%Y-%m-%d %H:%M UTC')" || exit 0
+          git push

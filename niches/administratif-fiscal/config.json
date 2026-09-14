@@ -1,0 +1,28 @@
+{
+  "id": "administratif-fiscal",
+  "guide_id": "01",
+  "name": "Administratif & fiscal",
+  "title": "Micro-entreprise 2026",
+  "status": "final",
+  "visual_family": "Tech & Corporate",
+  "palette": {
+    "background": "#F8FAFC",
+    "text": "#1E293B",
+    "structure": "#0F172A",
+    "accent": "#06B6D4"
+  },
+  "fonts": [
+    "Manrope",
+    "Inter",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "ordinateur portable",
+    "smartphone",
+    "documents fiscaux",
+    "carnet",
+    "stylo",
+    "livres business"
+  ],
+  "purpose": "Créer, optimiser et déclarer une micro-entreprise sans rater les décisions importantes avant l’action."
+}

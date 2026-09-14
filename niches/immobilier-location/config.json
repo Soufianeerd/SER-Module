@@ -1,0 +1,27 @@
+{
+  "id": "immobilier-location",
+  "guide_id": "07",
+  "name": "Immobilier & location",
+  "title": "Louer, louer mieux, éviter les erreurs",
+  "status": "draft",
+  "visual_family": "Éditorial Premium",
+  "palette": {
+    "background": "#FEFCE8",
+    "text": "#27272A",
+    "structure": "#166534",
+    "accent": "#D4AF37"
+  },
+  "fonts": [
+    "Playfair Display",
+    "Lora"
+  ],
+  "objects": [
+    "clés",
+    "plan",
+    "contrat",
+    "ordinateur",
+    "carnet cuir",
+    "appartement premium"
+  ],
+  "purpose": "Guider bail, état des lieux, rentabilité, obligations et démarches selon le profil."
+}

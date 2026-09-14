@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ton téléphone peut faire mieux sans acheter de matériel.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ton téléphone peut faire mieux sans acheter de matériel.\n\n• Lumière\n• Cadrage\n• Réglages / montage\n\n📘 SER Guide 15 — Créer de meilleures images avec son téléphone\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "animaux",
+  "guide_id": "10",
+  "name": "Animaux",
+  "title": "Comprendre son animal, agir au bon moment",
+  "status": "draft",
+  "visual_family": "Humain & Accessible",
+  "palette": {
+    "background": "#FAFAFA",
+    "text": "#292524",
+    "structure": "#D1FAE5",
+    "accent": "#9B2C2C"
+  },
+  "fonts": [
+    "Poppins",
+    "Nunito"
+  ],
+  "objects": [
+    "animal",
+    "carnet santé",
+    "gamelle",
+    "jouet",
+    "planning",
+    "photos naturelles"
+  ],
+  "purpose": "Éducation, alimentation, routine et signaux à surveiller selon espèce, race, âge et objectif."
+}

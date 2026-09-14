@@ -1,0 +1,27 @@
+{
+  "id": "fitness-transformation",
+  "guide_id": "05",
+  "name": "Fitness & transformation",
+  "title": "Challenge 75 jours — suivi interactif",
+  "status": "draft",
+  "visual_family": "Humain & Accessible",
+  "palette": {
+    "background": "#FAFAFA",
+    "text": "#292524",
+    "structure": "#D1FAE5",
+    "accent": "#9B2C2C"
+  },
+  "fonts": [
+    "Poppins",
+    "Nunito"
+  ],
+  "objects": [
+    "gourde",
+    "agenda",
+    "smartphone",
+    "programme",
+    "chaussures",
+    "repas équilibré"
+  ],
+  "purpose": "Suivre une transformation avec objectifs, habitudes, progression et adaptations selon le niveau."
+}

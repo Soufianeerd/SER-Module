@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ce bruit ne veut pas forcément dire “change la pièce”.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ce bruit ne veut pas forcément dire “change la pièce”.\n\n• Identifier le système\n• Tester les causes probables\n• Remplacer seulement après confirmation\n\n📘 SER Guide 04 — Diagnostiquer avant de remplacer\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

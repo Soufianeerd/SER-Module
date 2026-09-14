@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ton prix de vente ne dit rien de ta vraie marge.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ton prix de vente ne dit rien de ta vraie marge.\n\n• Prix d’achat\n• Frais et livraison\n• Fiscalité / marge nette\n\n📘 SER Guide 13 — Acheter, revendre, calculer sa marge\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

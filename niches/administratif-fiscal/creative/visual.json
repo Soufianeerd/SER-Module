@@ -1,0 +1,31 @@
+{
+  "family": "Tech & Corporate",
+  "palette": {
+    "background": "#F8FAFC",
+    "text": "#1E293B",
+    "structure": "#0F172A",
+    "accent": "#06B6D4"
+  },
+  "fonts": [
+    "Manrope",
+    "Inter",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "ordinateur portable",
+    "smartphone",
+    "documents fiscaux",
+    "carnet",
+    "stylo",
+    "livres business"
+  ],
+  "carousel_rules": {
+    "format": "4:5 portrait",
+    "slides": 3,
+    "slide_1": "hook visuel fort",
+    "slide_2": "valeur concrète",
+    "slide_3": "CTA e-book",
+    "quality": "premium éditorial, instagramable, cohérent avec la niche",
+    "brand": "SER Guides discret et constant"
+  }
+}

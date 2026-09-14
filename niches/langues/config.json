@@ -1,0 +1,26 @@
+{
+  "id": "langues",
+  "guide_id": "12",
+  "name": "Langues",
+  "title": "Apprendre une langue par niveau",
+  "status": "draft",
+  "visual_family": "Learning & Culture",
+  "palette": {
+    "background": "#F8F7FF",
+    "text": "#1E1B4B",
+    "structure": "#4F46E5",
+    "accent": "#FB7185"
+  },
+  "fonts": [
+    "Bricolage Grotesque",
+    "Noto Sans"
+  ],
+  "objects": [
+    "flashcards",
+    "écouteurs",
+    "carnet vocabulaire",
+    "smartphone",
+    "dialogues"
+  ],
+  "purpose": "Parcours débutant, intermédiaire et avancé avec révision active et audio."
+}

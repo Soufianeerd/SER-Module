@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Apprendre 100 mots ne suffit pas pour parler.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Apprendre 100 mots ne suffit pas pour parler.\n\n• Comprendre\n• Réutiliser\n• Répéter au bon rythme\n\n📘 SER Guide 12 — Apprendre une langue par niveau\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

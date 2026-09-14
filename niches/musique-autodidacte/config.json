@@ -1,0 +1,26 @@
+{
+  "id": "musique-autodidacte",
+  "guide_id": "14",
+  "name": "Musique & instrument",
+  "title": "Apprendre un instrument en autonomie",
+  "status": "draft",
+  "visual_family": "Learning & Culture",
+  "palette": {
+    "background": "#F8F7FF",
+    "text": "#1E1B4B",
+    "structure": "#4F46E5",
+    "accent": "#FB7185"
+  },
+  "fonts": [
+    "Bricolage Grotesque",
+    "Noto Sans"
+  ],
+  "objects": [
+    "instrument",
+    "partition",
+    "métronome",
+    "écouteurs",
+    "application"
+  ],
+  "purpose": "Progression par niveau avec exercices courts, écoute, rythme et objectifs."
+}

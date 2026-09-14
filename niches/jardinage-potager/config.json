@@ -1,0 +1,27 @@
+{
+  "id": "jardinage-potager",
+  "guide_id": "06",
+  "name": "Jardinage & potager",
+  "title": "Potager adapté à ta région",
+  "status": "draft",
+  "visual_family": "Nature & Food",
+  "palette": {
+    "background": "#F7F7EE",
+    "text": "#283618",
+    "structure": "#606C38",
+    "accent": "#DDA15E"
+  },
+  "fonts": [
+    "Fraunces",
+    "DM Sans"
+  ],
+  "objects": [
+    "plants",
+    "graines",
+    "calendrier de semis",
+    "outils jardin",
+    "terre",
+    "illustrations botaniques"
+  ],
+  "purpose": "Construire un calendrier de semis et d’entretien selon région, exposition, surface et cultures."
+}

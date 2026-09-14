@@ -1,0 +1,26 @@
+{
+  "id": "cuisine-contraintes",
+  "guide_id": "11",
+  "name": "Cuisine & contraintes",
+  "title": "Manger mieux avec ses contraintes",
+  "status": "draft",
+  "visual_family": "Nature & Food",
+  "palette": {
+    "background": "#F7F7EE",
+    "text": "#283618",
+    "structure": "#606C38",
+    "accent": "#BC6C25"
+  },
+  "fonts": [
+    "Fraunces",
+    "DM Sans"
+  ],
+  "objects": [
+    "plats réels",
+    "liste de courses",
+    "ingrédients",
+    "balance",
+    "planning repas"
+  ],
+  "purpose": "Recettes et organisation selon budget, temps, allergies, objectifs et produits disponibles."
+}

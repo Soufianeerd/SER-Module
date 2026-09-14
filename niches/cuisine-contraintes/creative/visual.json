@@ -1,0 +1,29 @@
+{
+  "family": "Nature & Food",
+  "palette": {
+    "background": "#F7F7EE",
+    "text": "#283618",
+    "structure": "#606C38",
+    "accent": "#BC6C25"
+  },
+  "fonts": [
+    "Fraunces",
+    "DM Sans"
+  ],
+  "objects": [
+    "plats réels",
+    "liste de courses",
+    "ingrédients",
+    "balance",
+    "planning repas"
+  ],
+  "carousel_rules": {
+    "format": "4:5 portrait",
+    "slides": 3,
+    "slide_1": "hook visuel fort",
+    "slide_2": "valeur concrète",
+    "slide_3": "CTA e-book",
+    "quality": "premium éditorial, instagramable, cohérent avec la niche",
+    "brand": "SER Guides discret et constant"
+  }
+}

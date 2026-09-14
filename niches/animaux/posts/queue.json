@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ce comportement n’est pas forcément “de la désobéissance”.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ce comportement n’est pas forcément “de la désobéissance”.\n\n• Âge et contexte\n• Routine\n• Signal à surveiller\n\n📘 SER Guide 10 — Comprendre son animal, agir au bon moment\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

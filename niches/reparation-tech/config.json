@@ -1,0 +1,27 @@
+{
+  "id": "reparation-tech",
+  "guide_id": "02",
+  "name": "Réparation smartphone & électroménager",
+  "title": "Diagnostiquer et réparer son appareil",
+  "status": "draft",
+  "visual_family": "Precision & Repair",
+  "palette": {
+    "background": "#F7F7F5",
+    "text": "#111827",
+    "structure": "#334155",
+    "accent": "#F97316"
+  },
+  "fonts": [
+    "Barlow Condensed",
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "appareil démonté",
+    "outils de précision",
+    "vue éclatée",
+    "pièces numérotées",
+    "tapis de réparation"
+  ],
+  "purpose": "Identifier le modèle, diagnostiquer le symptôme et guider une réparation avec vues éclatées vérifiées."
+}

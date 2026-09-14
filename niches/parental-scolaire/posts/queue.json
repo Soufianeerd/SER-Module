@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Parcoursup : l’erreur est souvent de commencer trop tard.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Parcoursup : l’erreur est souvent de commencer trop tard.\n\n• Calendrier\n• Dossier\n• Vœux et alternatives\n\n📘 SER Guide 09 — Démarches scolaires sans stress\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

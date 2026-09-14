@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Le challenge échoue souvent avant même le jour 1.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Le challenge échoue souvent avant même le jour 1.\n\n• Objectif réaliste\n• Routine mesurable\n• Suivi quotidien simple\n\n📘 SER Guide 05 — Challenge 75 jours — suivi interactif\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "family": "Nature & Food",
+  "palette": {
+    "background": "#F7F7EE",
+    "text": "#283618",
+    "structure": "#606C38",
+    "accent": "#DDA15E"
+  },
+  "fonts": [
+    "Fraunces",
+    "DM Sans"
+  ],
+  "objects": [
+    "plants",
+    "graines",
+    "calendrier de semis",
+    "outils jardin",
+    "terre",
+    "illustrations botaniques"
+  ],
+  "carousel_rules": {
+    "format": "4:5 portrait",
+    "slides": 3,
+    "slide_1": "hook visuel fort",
+    "slide_2": "valeur concrète",
+    "slide_3": "CTA e-book",
+    "quality": "premium éditorial, instagramable, cohérent avec la niche",
+    "brand": "SER Guides discret et constant"
+  }
+}

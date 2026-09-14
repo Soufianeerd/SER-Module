@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ton PC est lent ? Ne le remplace pas tout de suite.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ton PC est lent ? Ne le remplace pas tout de suite.\n\n• Stockage\n• RAM / démarrage\n• Température et logiciels\n\n📘 SER Guide 08 — Réparer et sécuriser son ordinateur\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "mecanique-auto",
+  "guide_id": "04",
+  "name": "Mécanique automobile",
+  "title": "Diagnostiquer avant de remplacer",
+  "status": "draft",
+  "visual_family": "Precision & Repair",
+  "palette": {
+    "background": "#F7F7F5",
+    "text": "#111827",
+    "structure": "#334155",
+    "accent": "#F97316"
+  },
+  "fonts": [
+    "Barlow Condensed",
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "pièces auto",
+    "clé dynamométrique",
+    "schéma moteur",
+    "freinage éclaté",
+    "valise diagnostic"
+  ],
+  "purpose": "Identifier le véhicule, le système concerné, les causes probables et la procédure de contrôle."
+}

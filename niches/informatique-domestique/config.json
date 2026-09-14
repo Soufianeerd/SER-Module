@@ -1,0 +1,28 @@
+{
+  "id": "informatique-domestique",
+  "guide_id": "08",
+  "name": "Informatique domestique",
+  "title": "Réparer et sécuriser son ordinateur",
+  "status": "draft",
+  "visual_family": "Tech & Corporate",
+  "palette": {
+    "background": "#F8FAFC",
+    "text": "#1E293B",
+    "structure": "#0F172A",
+    "accent": "#06B6D4"
+  },
+  "fonts": [
+    "Manrope",
+    "Inter",
+    "IBM Plex Mono"
+  ],
+  "objects": [
+    "PC ouvert",
+    "SSD",
+    "RAM",
+    "routeur",
+    "écran diagnostic",
+    "câbles"
+  ],
+  "purpose": "Diagnostiquer lenteur, stockage, réseau, sécurité et remplacement de composants."
+}

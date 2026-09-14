@@ -1,0 +1,26 @@
+{
+  "id": "revente-business",
+  "guide_id": "13",
+  "name": "Revente & petit business",
+  "title": "Acheter, revendre, calculer sa marge",
+  "status": "draft",
+  "visual_family": "Créatif & Dynamique",
+  "palette": {
+    "background": "#F4F4F5",
+    "text": "#09090B",
+    "structure": "#27272A",
+    "accent": "#8B5CF6"
+  },
+  "fonts": [
+    "Oswald",
+    "Lato"
+  ],
+  "objects": [
+    "colis",
+    "smartphone marketplace",
+    "calculatrice",
+    "étiquettes",
+    "tableau marge"
+  ],
+  "purpose": "Sourcer, calculer la marge, publier, vendre et comprendre les obligations."
+}

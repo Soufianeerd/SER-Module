@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ne signe pas avant d’avoir vérifié ces 3 points.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ne signe pas avant d’avoir vérifié ces 3 points.\n\n• Bail et clauses\n• État des lieux\n• Coût réel et obligations\n\n📘 SER Guide 07 — Louer, louer mieux, éviter les erreurs\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

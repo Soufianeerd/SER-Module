@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Avant de casser ce mur, vérifie ces 3 choses.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Avant de casser ce mur, vérifie ces 3 choses.\n\n• Nature du mur\n• Réseaux / gaines\n• Méthode et matériel adaptés\n\n📘 SER Guide 03 — Rénover sans improviser\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

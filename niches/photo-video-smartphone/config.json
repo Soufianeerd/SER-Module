@@ -1,0 +1,26 @@
+{
+  "id": "photo-video-smartphone",
+  "guide_id": "15",
+  "name": "Photo & vidéo smartphone",
+  "title": "Créer de meilleures images avec son téléphone",
+  "status": "draft",
+  "visual_family": "Créatif & Dynamique",
+  "palette": {
+    "background": "#18181B",
+    "text": "#FAFAFA",
+    "structure": "#27272A",
+    "accent": "#8B5CF6"
+  },
+  "fonts": [
+    "Oswald",
+    "Lato"
+  ],
+  "objects": [
+    "smartphone caméra",
+    "gimbal",
+    "lumière",
+    "avant/après",
+    "timeline montage"
+  ],
+  "purpose": "Réglages, cadrage, lumière, tournage et montage selon le téléphone et le type de contenu."
+}

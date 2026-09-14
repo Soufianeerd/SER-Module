@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Manger mieux ne commence pas par une recette.",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Manger mieux ne commence pas par une recette.\n\n• Budget\n• Temps disponible\n• Contraintes alimentaires\n\n📘 SER Guide 11 — Manger mieux avec ses contraintes\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}

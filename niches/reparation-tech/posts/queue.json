@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": "p01",
+      "status": "draft",
+      "priority": 50,
+      "title": "Ton appareil est-il vraiment en panne ?",
+      "slides_dir": "slides/p01",
+      "slides": [
+        "slide1.png",
+        "slide2.png",
+        "slide3.png"
+      ],
+      "caption": "Ton appareil est-il vraiment en panne ?\n\n• Identifier le modèle exact\n• Diagnostiquer avant de remplacer\n• Voir la pièce concernée en vue éclatée\n\n📘 SER Guide 02 — Diagnostiquer et réparer son appareil\n🔗 Guide complet : lien en bio"
+    }
+  ]
+}
